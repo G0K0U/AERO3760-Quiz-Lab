@@ -17,8 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = (await headers()).get("host") ?? "localhost:3000";
   const protocol = host.includes("localhost") ? "http" : "https";
   const image = `${protocol}://${host}/og.png`;
-  const title = "AERO3760 Quiz Lab";
-  const description = "Space Engineering 2 Lectures 1–3 轨道机动选择题复习站";
+  const title = "AERO3760 从零学习 · Quiz Lab";
+  const description = "从零掌握 Space Engineering 2 Lectures 1–3：轨道直觉、全部核心变量与公式、分步例题和 20 题模拟。";
   return {
     title,
     description,

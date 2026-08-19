@@ -1,3 +1,3 @@
-import QuizLab from "./QuizLab";
+import QuizLabV2 from "./QuizLabV2";
 
-export default function Home() { return <QuizLab />; }
+export default function Home() { return <QuizLabV2 />; }
