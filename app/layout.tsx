@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = host.includes("localhost") ? "http" : "https";
   const image = `${protocol}://${host}/og.png`;
   const title = "AERO3760 从零学习 · Quiz Lab";
-  const description = "从零掌握 Space Engineering 2 Lectures 1–3：轨道直觉、全部核心变量与公式、分步例题和 20 题模拟。";
+  const description = "从零掌握 Space Engineering 2 Lectures 1–6：轨道直觉、平面改变、地月转移与影响球，全部核心变量与公式、分步例题和 40 题随机模拟，备战 Week 8 Quiz。";
   return {
     title,
     description,

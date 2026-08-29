@@ -7,7 +7,7 @@
   const BEST_KEY = "aero3760-static-best-" + LANG;
   const LESSONS_KEY = "aero3760-static-lessons-" + LANG;
   const T = {
-    train: CN ? "训练模式" : "Practice mode",
+    train: CN ? "训练模式 · 全部 " + QUESTIONS.length + " 题" : "Practice · all " + QUESTIONS.length + " questions",
     simulate: CN ? "30 分钟模拟" : "30-minute simulation",
     feedback: CN ? "解析开启" : "Feedback on",
     submit: CN ? "提交答案" : "Submit",
@@ -28,7 +28,9 @@
     bestLabel: CN ? "本机完整模拟最佳" : "best full simulation on this device",
     startTitle: CN ? "现在把理解变成分数" : "Turn understanding into marks",
     trainSub: CN ? "逐题即时解析 · 不计时" : "Instant feedback per question · no timer",
-    simSub: CN ? "20 题 · 提交后统一解析" : "20 questions · review after submit",
+    simSub: CN ? "40 题随机抽 20 · 提交后统一解析" : "20 sampled from 40 · review after submit",
+    newOnly: CN ? "只练新内容 · 平面改变 + 月球" : "New material only · planes + Moon",
+    newSub: CN ? "Week 3 L4 + Week 4 的 20 题" : "The 20 questions from Wk3 L4 + Wk4",
     honor: CN ? "正式 quiz 为 closed book；本页只用于考前练习，考试时请关闭。" : "The real quiz is closed book. This page is for practice only — close it during the real quiz.",
     doneLabel: CN ? "✓ 已完成" : "✓ Done",
     mark: CN ? "标记为已学会" : "Mark as learned",
@@ -36,7 +38,17 @@
   };
 
   const quizEl = document.getElementById("quiz");
+  const EXAM_SIZE = 20;
+  function sampleExam() {
+    const bag = QUESTIONS.slice();
+    for (let i = bag.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = bag[i]; bag[i] = bag[j]; bag[j] = tmp;
+    }
+    return bag.slice(0, EXAM_SIZE);
+  }
   let mode = "practice";
+  let examRun = false;
   let pool = QUESTIONS.slice();
   let current = 0;
   let answers = new Array(pool.length).fill(null);
@@ -60,8 +72,9 @@
 
   function renderIdle() {
     quizEl.innerHTML =
-      '<div class="quiz-launch"><p>FINAL STEP / QUIZ ENGINE</p><h2>' + T.startTitle + '</h2>' +
+      '<div class="quiz-launch"><p>FINAL STEP / QUIZ ENGINE · ' + QUESTIONS.length + ' QUESTIONS</p><h2>' + T.startTitle + '</h2>' +
       '<div class="mode-grid"><button data-act="practice"><span>TRAIN</span><b>' + T.train + '</b><small>' + T.trainSub + '</small></button>' +
+      '<button data-act="new"><span>NEW</span><b>' + T.newOnly + '</b><small>' + T.newSub + '</small></button>' +
       '<button data-act="exam"><span>SIMULATE</span><b>' + T.simulate + '</b><small>' + T.simSub + '</small></button></div>' +
       '<p class="honor-note">' + T.honor + '</p></div>';
   }
@@ -93,7 +106,7 @@
       const good = answers[current] === q.answer;
       explanation =
         '<div class="explanation ' + (good ? "good" : "bad") + '"><strong>' + (good ? T.correct : T.trap) + '</strong><p>' + q.why + '</p>' +
-        (q.trap ? '<small>陷阱：' + q.trap + '</small>' : "") + '</div>';
+        (q.trap ? '<small>' + (CN ? "陷阱：" : "Trap: ") + q.trap + '</small>' : "") + '</div>';
     }
 
     const isLast = current === pool.length - 1;
@@ -122,7 +135,7 @@
     const score = pool.reduce(function (sum, q, index) { return sum + (answers[index] === q.answer ? 1 : 0); }, 0);
     const wrongList = pool.filter(function (q, index) { return answers[index] !== q.answer; });
     const best = bestScore();
-    if (pool.length === QUESTIONS.length && score > best) saveBest(score);
+    if (examRun && pool.length === EXAM_SIZE && score > best) saveBest(score);
     const ratio = score / pool.length;
     const headline = ratio >= 0.9 ? (CN ? "已经进入稳定区。" : "You are in the stable zone.")
       : ratio >= 0.7 ? (CN ? "基础不错，修补错题。" : "Solid base — patch the wrong answers.")
@@ -151,13 +164,26 @@
 
   function render() {
     if (mode === "idle") renderIdle();
-    else if (mode === "running") renderRunning();
+    else if (mode === "practice" || mode === "exam") renderRunning();
     else renderResult();
   }
 
   function startPractice() {
     mode = "practice";
+    examRun = false;
     pool = QUESTIONS.slice();
+    current = 0;
+    answers = new Array(pool.length).fill(null);
+    seconds = 1800;
+    stopTimer();
+    render();
+    quizEl.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function startNew() {
+    mode = "practice";
+    examRun = false;
+    pool = QUESTIONS.filter(function (q) { return q.id > 20; });
     current = 0;
     answers = new Array(pool.length).fill(null);
     seconds = 1800;
@@ -168,7 +194,8 @@
 
   function startExam() {
     mode = "exam";
-    pool = QUESTIONS.slice();
+    examRun = true;
+    pool = sampleExam();
     current = 0;
     answers = new Array(pool.length).fill(null);
     seconds = 1800;
@@ -197,7 +224,7 @@
   }
 
   function choose(index) {
-    if (mode !== "running") return;
+    if (mode === "idle" || mode === "result") return;
     answers[current] = index;
     render();
   }
@@ -232,6 +259,7 @@
     const wrongList = pool.filter(function (q, index) { return answers[index] !== q.answer; });
     if (wrongList.length === 0) return;
     mode = "practice";
+    examRun = false;
     pool = wrongList.slice();
     current = 0;
     answers = new Array(pool.length).fill(null);
@@ -245,6 +273,7 @@
     if (!target) return;
     const act = target.dataset.act;
     if (act === "practice") startPractice();
+    else if (act === "new") startNew();
     else if (act === "exam") startExam();
     else if (act === "next") next();
     else if (act === "prev") prev();
