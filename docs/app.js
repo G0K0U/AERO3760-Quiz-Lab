@@ -28,9 +28,9 @@
     bestLabel: CN ? "本机完整模拟最佳" : "best full simulation on this device",
     startTitle: CN ? "现在把理解变成分数" : "Turn understanding into marks",
     trainSub: CN ? "逐题即时解析 · 不计时" : "Instant feedback per question · no timer",
-    simSub: CN ? "40 题随机抽 20 · 提交后统一解析" : "20 sampled from 40 · review after submit",
-    newOnly: CN ? "只练新内容 · 平面改变 + 月球" : "New material only · planes + Moon",
-    newSub: CN ? "Week 3 L4 + Week 4 的 20 题" : "The 20 questions from Wk3 L4 + Wk4",
+    simSub: CN ? "60 题随机抽 20 · 提交后统一解析" : "20 sampled from 60 · review after submit",
+    newOnly: CN ? "只练新内容 · Week 5+6 新考点" : "New material only · Wk 5+6",
+    newSub: CN ? "地月拼接、三体与月球轨道 20 题" : "Patched conics, 3-body & orbits (20 Qs)",
     honor: CN ? "正式 quiz 为 closed book；本页只用于考前练习，考试时请关闭。" : "The real quiz is closed book. This page is for practice only — close it during the real quiz.",
     doneLabel: CN ? "✓ 已完成" : "✓ Done",
     mark: CN ? "标记为已学会" : "Mark as learned",
@@ -183,7 +183,7 @@
   function startNew() {
     mode = "practice";
     examRun = false;
-    pool = QUESTIONS.filter(function (q) { return q.id > 20; });
+    pool = QUESTIONS.filter(function (q) { return q.id > 40; });
     current = 0;
     answers = new Array(pool.length).fill(null);
     seconds = 1800;
