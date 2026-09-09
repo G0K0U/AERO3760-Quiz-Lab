@@ -113,8 +113,8 @@ In the Earth-centred equation of motion the lunar perturbation term is:
 >
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
-> 当我们以地心为原点建立坐标系去计算飞船的加速度时，必须意识到：**地心坐标系并不是一个静止的牛顿惯性坐标系！** 地球自身也是一个漂浮在宇宙中的质点，月球引力不仅吸引飞船，也在狂暴地拉扯着地球本身，使地球向着月球产生牵连加速度 $\mu_m rac{\mathbf{r}_m}{r_m^3}$。因此，由牛顿相对加速度定律，飞船相对于地心的相对加速度方程为：  
-> $$\ddot{\mathbf{r}} = -rac{\mu_e}{r^3}\mathbf{r} + \mathbf{p}, \quad \mathbf{p} = \mu_m \left[ rac{\mathbf{r}_{m/s}}{r_{m/s}^3} - rac{\mathbf{r}_m}{r_m^3} ight]$$  
+> 当我们以地心为原点建立坐标系去计算飞船的加速度时，必须意识到：**地心坐标系并不是一个静止的牛顿惯性坐标系！** 地球自身也是一个漂浮在宇宙中的质点，月球引力不仅吸引飞船，也在狂暴地拉扯着地球本身，使地球向着月球产生牵连加速度 $\mu_m \frac{\mathbf{r}_m}{r_m^3}$。因此，由牛顿相对加速度定律，飞船相对于地心的相对加速度方程为：  
+> $$\ddot{\mathbf{r}} = -\frac{\mu_e}{r^3}\mathbf{r} + \mathbf{p}, \quad \mathbf{p} = \mu_m \left[ \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right]$$  
 > 月球摄动项 $\mathbf{p}$ 绝对不是月球对飞船的单纯引力，而是**月球对飞船的直接引力减去月球对地球原点的牵连引力之差（The difference of its pulls on craft and Earth）**！  
 > **【教授设坑套路分析】**:  
 > - 选项 A（仅月球对飞船的引力）是没学好非惯性系动力学的初学者最容易掉入的头号陷阱！  
