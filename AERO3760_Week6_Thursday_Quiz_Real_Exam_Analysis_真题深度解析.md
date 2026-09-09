@@ -69,7 +69,7 @@ The Moon's orbit is often quoted as inclined about five degrees. A launch site c
 > **【正确答案】**: **D**  
 > **【0基础白话直观图像】**:  
 > 天文爱好者常说的“月球倾角约 5 度（$5.14^\circ$）”，是站在太阳系上帝视角相对于**黄道面（地球绕太阳公转面，Ecliptic）**而言的。然而，人类建造在地球表面的发射场（如肯尼迪航天中心、文昌），其发射坐标系是绑定在**地球赤道面（Earth's Equator）**上的！地球自转轴有 $23.44^\circ$ 的黄赤交角，加之月球白道面的升交点每 18.6 年绕黄道法线旋转一圈，导致月球相对于**地球赤道**的倾角在极宽的区间内剧烈摆动：  
-> $$i_m = 23.44^\circ \pm 5.14^\circ \in [\mathbf{18.3^\circ, 28.6^\circ}]$$  
+> $\displaystyle i_m = 23.44^\circ \pm 5.14^\circ \in [\mathbf{18.3^\circ, 28.6^\circ}]$  
 > 发射场极其在乎这 18° 到 29° 的倾角，因为第 8 点讲过的定律：正东发射能打出的最小倾角等于发射场纬度（肯尼迪航天中心为 $28.5^\circ$）。当月球倾角摆动到 $28.6^\circ$ 时，肯尼迪航天中心正好可以无需变面直接将飞船共面打入地月转移轨道！  
 > **【教授设坑套路分析】**:  
 > - 选项 A 是经典事实性诱饵：5 度确实是指黄道面，但这恰恰是发射场**不关心**的，发射场关心的是赤道面！  
@@ -114,7 +114,7 @@ In the Earth-centred equation of motion the lunar perturbation term is:
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 当我们以地心为原点建立坐标系去计算飞船的加速度时，必须意识到：**地心坐标系并不是一个静止的牛顿惯性坐标系！** 地球自身也是一个漂浮在宇宙中的质点，月球引力不仅吸引飞船，也在狂暴地拉扯着地球本身，使地球向着月球产生牵连加速度 $\mu_m \frac{\mathbf{r}_m}{r_m^3}$。因此，由牛顿相对加速度定律，飞船相对于地心的相对加速度方程为：  
-> $$\ddot{\mathbf{r}} = -\frac{\mu_e}{r^3}\mathbf{r} + \mathbf{p}, \quad \mathbf{p} = \mu_m \left[ \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right]$$  
+> $\displaystyle \ddot{\mathbf{r}} = -\frac{\mu_e}{r^3}\mathbf{r} + \mathbf{p}, \quad \mathbf{p} = \mu_m \left[ \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right]$  
 > 月球摄动项 $\mathbf{p}$ 绝对不是月球对飞船的单纯引力，而是**月球对飞船的直接引力减去月球对地球原点的牵连引力之差（The difference of its pulls on craft and Earth）**！  
 > **【教授设坑套路分析】**:  
 > - 选项 A（仅月球对飞船的引力）是没学好非惯性系动力学的初学者最容易掉入的头号陷阱！  

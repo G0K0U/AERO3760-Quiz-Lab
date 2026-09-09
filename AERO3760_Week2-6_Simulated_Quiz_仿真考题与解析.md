@@ -151,7 +151,7 @@ A spacecraft at an off-apsis true anomaly ($\theta \neq 0^\circ, 180^\circ$) has
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 火箭发动机点火产生推力，改变的是速度向量 $\Delta\mathbf{v} = \mathbf{v}^+ - \mathbf{v}^-$。由向量几何余弦定理：  
-> $$\Delta v = \sqrt{v^2 + v^2 - 2 v^2 \cos(\Delta\gamma)} = 2 v \sin\left(\frac{\Delta\gamma}{2}\right)$$  
+> $\displaystyle \Delta v = \sqrt{v^2 + v^2 - 2 v^2 \cos(\Delta\gamma)} = 2 v \sin\left(\frac{\Delta\gamma}{2}\right)$  
 > 哪怕航天器的速率标量一丁点都没变（动能守恒），**仅仅在三维空间中把速度方向掰弯一个角度，火箭就必须实打实地喷射出大量推进剂！** 太空中转向是极度昂贵的物理操作。  
 > **【考场一秒题眼】**: 看到 `Rotate velocity vector with speed magnitude unchanged` $\to$ 选 `2 v sin(Delta gamma / 2) != 0`。
 
@@ -205,7 +205,7 @@ An electric propulsion spacecraft with continuous low-thrust tangential steering
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 离子电推力极其微弱（几十毫牛），发动机持续喷射数月。飞船的轨道在每一个瞬间都几乎是完美的圆，慢慢像蚊香一样螺旋向外展开。积分切向加速度得到的总速度增量公式极为简洁（Curtis Eq. 6.39）：  
-> $$\Delta v \approx |v_{c1} - v_{c2}|$$  
+> $\displaystyle \Delta v \approx |v_{c1} - v_{c2}|$  
 > 所需总速度增量几乎恰好等于初轨圆速度与终轨圆速度的**标量差绝对值**。  
 > **【考场一秒题眼】**: 看到 `Continuous low-thrust spiral delta-v` $\to$ 选 `Absolute difference between circular speeds |vc1 - vc2|`。
 
