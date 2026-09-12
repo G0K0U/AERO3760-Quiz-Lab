@@ -32,7 +32,7 @@
 
 ### 🟢 1. Pass 基础阶 (1.0 分题) · 秒杀物理铁律
 1. **冲量机动两假定**：位置空间绝对连续不变（$\mathbf{r}^+ = \mathbf{r}^-$），速度向量瞬时跳跃跳变（$\mathbf{v}^+ = \mathbf{v}^- + \Delta\mathbf{v}$）。*(周末真题 Q3)*
-2. **逆行轨道几何定义**：轨道平面法向（角动量 $\mathbf{h}$）与天体自转极轴 $\mathbf{K}$ 的夹角（倾角 $i > 90^\circ$），纯三维方向几何，非汽车倒车。*(周末真题 Q1)*
+2. **三体数值积分地月轨道逆行判据 (Retrograde near the Moon)**：真实三体引力场是非中心力场，瞬时速度 $\mathbf{v}$ 与瞬时总加速度 $\mathbf{a}$ 张成局域轨道面，其法向量为副法线 $\hat{\mathbf{b}} = \frac{\mathbf{v} \times \mathbf{a}}{|\mathbf{v} \times \mathbf{a}|}$。局域倾角 $i = \arccos(\hat{\mathbf{b}} \cdot \hat{\mathbf{K}})$ 描述的是**局域轨道平面法向与月球自转极轴的夹角 (Local plane's normal against the polar axis)**。飞船在奔月途中为顺行（$i \approx 16^\circ$），接近月球时曲率面剧烈翻转使得 $i > 90^\circ$（在近月点 $i \approx 156^\circ$），呈现绕月逆行！*(周末真题 Q1, Curtis 9.4 p.459 Fig. 9.16 & Wk6 Lec 5 Slide 22-24)*
 3. **地月霍曼转移两次点火量级**：近地点点火（$\Delta v_1 \approx 3.14\text{ km/s}$）是远地点点火（$\Delta v_2 \approx 0.83\text{ km/s}$）的近 4 倍（**a factor of several**）。*(周末真题 Q2)*
 4. **齐奥尔科夫斯基火箭方程**：固定干重下，推进剂质量对速度增量呈**指数依赖（Exponentially）**，每一段新加速都比前一段更昂贵。*(周末真题 Q4)*
 5. **影响球内引力模型**：二体拼接（Patched-conic）在影响球内**仅仅保留月球引力**，坚决不保留地球引力。*(周末真题 Q19)*

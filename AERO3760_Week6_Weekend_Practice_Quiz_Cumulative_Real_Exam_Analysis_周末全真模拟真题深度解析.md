@@ -22,7 +22,7 @@
 
 | 题号 | 分值 | 难度阶梯 (Band) | 核心考点专题 (Topic) | 考场一秒秒杀题眼 |
 | :---: | :---: | :---: | :--- | :--- |
-| **Q01** | 1.0 pt | 🟢 Pass | [逆行轨道的几何本质定义 (Definition of Retrograde Orbit)](#q1-逆行轨道的几何本质定义 ) | ``retrograde near the Moon` $\to$` |
+| **Q01** | 1.0 pt | 🟢 Pass | [数值积分地月轨道逆行判据与局域轨道面法向量 (Retrograde Criterion for Integrated Lunar Trajectory)](#q1-数值积分地月轨道逆行判据) | ``integrated lunar trajectory reported as retrograde near the Moon` $\to$` |
 | **Q02** | 1.0 pt | 🟢 Pass | [地月霍曼转移两次点火的量级对比 (Hohmann Burns Magnitude Comparison)](#q2-地月霍曼转移两次点火的量) | ``Hohmann to lunar distance larger burn` $\to$` |
 | **Q03** | 1.0 pt | 🟢 Pass | [冲量机动的理想化假定 (Impulsive Manoeuvre Idealisation)](#q3-冲量机动的理想化假定 () | ``impulsive manoeuvre idealisation assumes` $\to$` |
 | **Q04** | 1.0 pt | 🟢 Pass | [齐奥尔科夫斯基火箭方程推进剂指数依赖性 (Rocket Equation Exponential Dependency)](#q4-齐奥尔科夫斯基火箭方程推) | ``rocket equation propellant depends on Delta v` $\to$` |
@@ -75,13 +75,13 @@
 
 ---
 
-## <a id="q1-逆行轨道的几何本质定义 "></a>Q01 · 🟢 【Pass 级 · 1.0 分】逆行轨道的几何本质定义 (Definition of Retrograde Orbit)
+## <a id="q1-数值积分地月轨道逆行判据"></a>Q01 · 🟢 【Pass 级 · 1.0 分】数值积分地月轨道逆行判据与局域轨道面法向量 (Retrograde Criterion for Integrated Lunar Trajectory)
 
 **【英文原题】**:
 > An integrated lunar trajectory is reported as retrograde near the Moon. This is a statement about:
 
 **【中文翻译】**:
-> 一条经过数值积分计算的地月轨道在接近月球时被报告为“逆行 (Retrograde)”。这描述的是：
+> 一条经过全摄动数值积分计算的地月轨道在接近月球时被报告为“逆行 (Retrograde)”。这描述的是：
 
 **【选项列表 (Options)】**:
 - [A] the Moon, which orbits opposite to the craft  
@@ -91,18 +91,24 @@
 - [C] the burn, which was applied against the velocity  
   *(中文: 变轨点火，其推力施加方向与速度方向相反)*
 - **[D] the local plane's normal against the polar axis**  
-  *(中文: 轨道局域平面的法向量与天体极轴方向的夹角关系 (顺行还是逆行))* 👈 **【正确选项】**
+  *(中文: 轨道局域平面的法向量与月球极轴方向的夹角关系 (顺行还是逆行))* 👈 **【正确选项】**
 
 > **【正确答案】**: **D**  
 > **【0基础白话直观图像】**:  
-> 在轨道力学中，“顺行（Prograde）”还是“逆行（Retrograde）”从来不是说飞船像汽车倒车一样倒着飞，也不是看发动机往哪喷，而是**纯粹的三维立体空间方向几何**！以中心天体（月球）的北极轴向量 $\mathbf{K}$ 为基准，飞船轨道平面的法向量（角动量向量 $\mathbf{h} = \mathbf{r} \times \mathbf{v}$）如果朝上（$\mathbf{h} \cdot \mathbf{K} > 0$，轨道倾角 $i < 90^\circ$），就叫顺行；如果朝下（$\mathbf{h} \cdot \mathbf{K} < 0$，轨道倾角 $i > 90^\circ$），就叫逆行！  
+> 在真实的三体数值积分（Integrated Lunar Trajectory）中，地球与月球的引力同时作用，引力场是非中心力场，飞船的运动轨迹并不是一个平面内的固定开普勒椭圆！  
+> 根据微分几何动力学，飞船在空间中的**局域瞬时轨道平面（Local Trajectory Plane）**是由瞬时速度向量 $\mathbf{v}$ 和瞬时总加速度向量 $\mathbf{a}$ 所张成的，该局域平面的法向量即为副法线向量（Binormal）：  
+> > $\displaystyle \hat{\mathbf{b}} = \frac{\mathbf{v} \times \mathbf{a}}{|\mathbf{v} \times \mathbf{a}|}$  
+> 飞船相对于月球参考系的局域轨道倾角定义为副法线与月球极轴的夹角：$i = \arccos(\hat{\mathbf{b}} \cdot \hat{\mathbf{K}})$。  
+> - 在奔月中途，飞船主要由地心引力主导，表现为顺行（$i \approx 16^\circ$）；  
+> - 当深入月球引力场接近月球时，月球引力接管主导，轨道曲率平面发生剧烈翻转，局域法向 $\hat{\mathbf{b}}$ 与月球极轴 $\hat{\mathbf{K}}$ 的夹角翻过 $90^\circ$（在近月点达到 $i \approx 156^\circ > 90^\circ$），即 $\hat{\mathbf{b}} \cdot \hat{\mathbf{K}} < 0$！  
+> 因此，报告为“逆行（Retrograde near the Moon）”，**是一个关于局域轨道平面法向量与月球极轴相对夹角的严格三维空间几何陈述（The local plane's normal against the polar axis）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 2, Section 2.11 *Orbital elements*, Book pp. 108–110 (PDF pp. 115–117); Week 5 Lecture 4 & Lecture 5 *Lunar Trajectories*.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.4 *Numerical integration of lunar trajectories*, Book pp. 456–461 (PDF pp. 463–468)，尤其是 Example 9.3 与 Fig. 9.16 (Book p. 459, PDF p. 466) 明确指出地月自由返回轨道在接近月球时局部倾角翻过 90°：`The trajectory becomes retrograde (i > 90 deg) as it approaches the moon`；以及 Section 9.2 (Book p. 445, PDF p. 452) 判据：`if \hat{h}_2 \cdot \hat{k} < 0, then the motion around the moon is retrograde (clockwise)`。讲义对应：Week 6 Lecture 5 Slides 22–24 (Slide 22 *Binormal gives the local inclination: \hat{b} = (v x a)/|v x a|, i = cos^-1(\hat{b} \cdot \hat{K})* & Slide 24 *Retrograde, and where exactly you say so: both read ~156 deg at perilune, a retrograde pass about the Moon*).  
 > **【教授设坑套路剖析】**:  
-> - 选项 B 是日常直觉陷阱：以为逆行是“倒退航行”，实际上飞船在轨道上一直在向前飞，只是绕月方向与月球自转反向。  
-> - 选项 C 混淆了“反向减速点火（Retro-burn / Braking burn）”与“逆行轨道（Retrograde orbit）”。  
-> - 选项 A 颠倒了主谓宾，月球没有反向公转。  
-> **【考场一秒题眼】**: 看到 `retrograde near the Moon` $\to$ 选 `local plane's normal against the polar axis`。
+> - 选项 B 是日常语言直觉陷阱：以为逆行是“倒退航行”，实际上飞船一直在向前高速飞行，只是局域法线偏向月球南极方向。  
+> - 选项 C 混淆了反向减速点火（Retro-burn / Braking burn）与轨道空间取向（Retrograde orbit）。  
+> - 选项 A 颠倒了主谓，月球绕地公转方向是固定不变的。  
+> **【考场一秒题眼】**: 看到 `integrated lunar trajectory reported as retrograde near the Moon` $\to$ 选 `the local plane's normal against the polar axis`。
 
 ---
 
@@ -193,7 +199,7 @@
 > **【教材与讲义精确出处】**:  
 > 📖 Curtis Chapter 6, Section 6.1, Book p. 288 (PDF p. 295), Eq. 6.6.  
 > **【教授设坑套路剖析】**:  
-> - 选项 A 是日常最容易犯的线性思维陷阱（误以为加速 2 倍只需要 2 倍燃料）。  
+> - 选项 A 是日常最容易犯的线性思维陷阱（以为加速 2 倍只需要 2 倍燃料）。  
 > - 选项 B 混淆了动能公式（$\Delta E_k \propto v^2$）与工质质量关系。  
 > **【考场一秒题眼】**: 看到 `rocket equation propellant depends on Delta v` $\to$ 选 `exponentially, so each further increment costs more than the last`。
 
