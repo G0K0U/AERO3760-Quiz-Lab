@@ -40,7 +40,7 @@ In Keplerian two-body orbital mechanics, rocket burns are commonly modelled as i
 - **C. The spacecraft position vector is continuous ($\mathbf{r}^+ = \mathbf{r}^-$), while the velocity vector experiences a finite jump ($\mathbf{v}^+ = \mathbf{v}^- + \Delta\mathbf{v}$).**  
 - D. The total mass of the spacecraft and remaining propellant remains strictly constant across the delta-v application.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.1 *Impulsive maneuvers*, **Book p. 287 (PDF p. 294)**  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.2 *Impulsive maneuvers*, **Book pp. 287–289 (PDF pp. 294–296)**  
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 真实的发动机喷火需要持续一段时间，但在开普勒两体计算中，我们把喷火过程极度抽象为“神之锤在瞬间敲了一记”。其核心几何假设只有两条：  
@@ -60,7 +60,7 @@ The Indian geostationary communications satellite GSAT-31 fired its liquid apoge
 - C. The magnitude of total delta-v delivered relative to circular orbital speed.  
 - D. The initial thrust-to-weight ratio of the propulsion system.  
 
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 6, Section 6.9, **Book pp. 329–331 (PDF pp. 336–338)**; Lecture 4 Slides, pp. 28–32  
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 6, Section 6.10 *Nonimpulsive orbital maneuvers*, **Book pp. 329–335 (PDF pp. 336–342)**; Lecture 4 Slides, pp. 28–32  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 很多人以为一次点火符不符合冲量假定取决于手表上的钟表时间（是否小于几分钟），**这是大错特错的！** GSAT-31 喷了漫长的 78 分钟，为什么依然能用冲量模型？因为在远地点飞船速度极慢，78 分钟只在轨道上挪动了 **10 度的圆弧（$\Delta\theta \approx 10^\circ$）**，在空间中几乎悬停在一个点上！但如果在近地点喷 78 分钟，飞船疯狂掠过 **216 度（掉头飞了大半圈）**，推力方向和速度方向严重脱节，引力损耗极大。因此，**唯一物理判据是点火期间飞船真近点角到底扫过了多少弧度（The arc of true anomaly swept $\Delta\theta$）**。  
@@ -96,7 +96,7 @@ When executing a standard coplanar Hohmann transfer from a low circular orbit to
 - **C. Because without the second burn, the spacecraft remains on the transfer ellipse and will inevitably fall back to its initial low perigee.**  
 - D. Because orbital angular momentum cannot be conserved along an unpowered transfer orbit.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.2 *Hohmann transfer*, **Book pp. 289–295 (PDF pp. 296–302)**, Equations 6.1–6.11  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.3 *Hohmann transfer*, **Book pp. 289–295 (PDF pp. 296–302)**, Equations 6.13–6.15 & Example 6.1  
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 第一次在近地点点火，仅仅是把轨道从小圆“拉伸”成了一条椭圆。当飞船滑行半圈到达目标轨道高度（远地点）时，其速度 $v_{t2} = \sqrt{\frac{\mu}{r_2}}\sqrt{\frac{2r_1}{r_1+r_2}}$ 低于该高度圆轨道速度 $v_{c2} = \sqrt{\frac{\mu}{r_2}}$。如果不启动发动机补足速度差 $\Delta v_2$ 进行圆化（Circularise），根据开普勒椭圆能量守恒，**飞船会顺着这条椭圆轨道原路跌回初始低轨道的近地点！** 它绝不可能自己留在高处。  
@@ -112,7 +112,7 @@ Under what geometric condition can a 3-burn bi-elliptic transfer strictly outper
 - **C. Only when the radius ratio $r_2 / r_1 > 11.94$, provided the intermediate apogee $r_b$ is pushed sufficiently far out.**  
 - D. Only when the spacecraft employs electric propulsion with continuous tangential thrust.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.3 *Bielliptic Hohmann transfer*, **Book pp. 295–298 (PDF pp. 302–305)**, Figure 6.7 & Equations 6.16–6.18  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.4 *Bielliptic Hohmann transfer*, **Book pp. 295–298 (PDF pp. 302–305)**, Figure 6.7 & Equations 6.16–6.18  
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 记住轨道机动三大黄金阈值（半径比 $R = r_2/r_1$）：  
@@ -131,7 +131,7 @@ A chaser spacecraft is tasked with catching up to a space station that is orbiti
 - C. Radially outward toward the station to cut directly across the orbital circle.  
 - D. Normal to the orbital plane to tilt its trajectory into a high-inclination interceptor track.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.4 *Phasing maneuvers*, **Book pp. 298–303 (PDF pp. 305–310)**, Equations 6.19–6.25 & Example 6.3  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.5 *Phasing maneuvers*, **Book pp. 298–308 (PDF pp. 305–315)**, Equations 6.19–6.25 & Example 6.4  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 地面开车的直觉是“追前车必须踩油门”，**在太空中踩油门是找死！** 顺行加速点火会导致轨道半长轴 $a$ 变大，由开普勒第三定律 $T = 2\pi\sqrt{a^3/\mu}$，你的轨道周期 $T$ 会显著变长！你转完一圈的时间比目标还长，只会被前方的空间站越甩越远。**太空中唯一的正确追赶法是踩刹车（Retrograde burn）！** 踩刹车让你跌入更小的内圈椭圆轨道，周期缩短，在内圈飞速绕圈，几圈之后就能从后方套圈追上目标！  
@@ -147,7 +147,7 @@ A spacecraft at an off-apsis true anomaly ($\theta \neq 0^\circ, 180^\circ$) has
 - C. Equal to $v \tan\Delta\gamma$, proportional to the change in radial velocity.  
 - D. Undefined, because Keplerian orbits forbid pure direction changes off the apsides.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.5–6.6, **Book pp. 303–313 (PDF pp. 310–320)**, Equations 6.26–6.34  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.6 *Non-Hohmann transfers with a common apse line* & Section 6.7 *Apse line rotation*, **Book pp. 303–313 (PDF pp. 310–320)**, Equations 6.24–6.25 & Example 6.8  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 火箭发动机点火产生推力，改变的是速度向量 $\Delta\mathbf{v} = \mathbf{v}^+ - \mathbf{v}^-$。由向量几何余弦定理：  
@@ -165,7 +165,7 @@ A pure plane change rotates the orbital plane by an inclination angle $\delta$ w
 - **C. The delta-v required to boost from circular speed to parabolic escape speed ($(\sqrt{2} - 1) v_c \approx 0.414 v_c$).**  
 - D. Only 4.14% of the circular orbital velocity.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.8 *Plane change maneuvers*, **Book pp. 317–324 (PDF pp. 324–331)**, Equations 6.35–6.37  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.9 *Plane change maneuvers*, **Book pp. 317–328 (PDF pp. 324–335)**, Equations 6.26, 6.30, 6.32  
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 纯变面公式为 $\Delta v = 2 v_c \sin(\delta/2)$。当 $\delta = 24^\circ$ 时，$\delta/2 = 12^\circ$。心算：$2 \sin(12^\circ) = 2 \times 0.2079 = \mathbf{0.414}$，即 $\Delta v = 0.414 v_c$。  
@@ -183,7 +183,7 @@ For a direct rocket launch with no out-of-plane dogleg steering, launching due e
 - **C. The geographic latitude of the launch site ($\phi$).**  
 - D. The geographic longitude of the launch site.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.8, **Book pp. 326–328 (PDF pp. 333–335)**, Equation 6.38b  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.9 *Plane change maneuvers*, **Book pp. 326–328 (PDF pp. 333–335)**, Equation 6.38b  
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 球面三角学核心方程：$\cos i = \cos\phi \sin A_0$。  
@@ -201,7 +201,7 @@ An electric propulsion spacecraft with continuous low-thrust tangential steering
 - **C. The absolute difference between the initial and final circular orbital speeds ($|v_{c1} - v_{c2}|$).**  
 - D. Zero, because electric thrust does not produce impulsive acceleration.  
 
-> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.9 *Nonimpulsive orbital maneuvers*, **Book pp. 329–335 (PDF pp. 336–342)**, Equation 6.39 & Example 6.12  
+> 📖 **教材对应出处 (Textbook Reference)**: Curtis Chapter 6, Section 6.10 *Nonimpulsive orbital maneuvers*, **Book pp. 329–335 (PDF pp. 336–342)**, Equation 6.39 & Example 6.12  
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 离子电推力极其微弱（几十毫牛），发动机持续喷射数月。飞船的轨道在每一个瞬间都几乎是完美的圆，慢慢像蚊香一样螺旋向外展开。积分切向加速度得到的总速度增量公式极为简洁（Curtis Eq. 6.39）：  
@@ -236,7 +236,7 @@ At the boundary of the Moon's Laplace sphere of influence ($R_S \approx 66,183\t
 - C. Strictly zero, because the Moon's mass completely shields the Earth's gravity.  
 - D. Negligible compared to solar radiation pressure.  
 
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 8, Section 8.2, **Book pp. 392–397 (PDF pp. 399–404)**; Chapter 9, **Book p. 440 (PDF p. 447)**  
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 8, Section 8.4 *Sphere of influence*, **Book pp. 392–396 (PDF pp. 399–403)**, Equation 8.24; Chapter 9, Section 9.2, **Book p. 440 (PDF p. 447)**  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 考试头号大雷区：**“影响球边界上两体引力互相抵消平衡”，这是彻底的伪科学！**  
@@ -286,7 +286,7 @@ In designing a circumlunar free-return trajectory (such as that used by Apollo 1
 - C. It eliminates all solar radiation pressure during the return transit.  
 - D. Passing the leading edge is the only way to avoid the Moon's gravitational pull.  
 
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 8, Section 8.5, **Book pp. 412–418 (PDF pp. 419–425)**; Lecture 4 & Lecture 6, Slide 43, 44  
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 8, Section 8.9 *Planetary flyby*, **Book pp. 412–420 (PDF pp. 419–427)**, Equations 8.41, 8.44; Chapter 9, Section 9.2, **Book pp. 450–456 (PDF pp. 457–463)**; Lecture 4 & Lecture 6, Slide 43, 44  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 重力助推两大方向规则：  
@@ -304,7 +304,7 @@ In three-dimensional patched conics, the arrival angle $\lambda$ defines a cone 
 - **C. Exactly two lines, never one and never three, because the transfer plane contains the cone's own symmetry axis (the Earth-Moon line).**  
 - D. Exactly three lines corresponding to the three degrees of freedom in 3D space.  
 
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 9, Section 9.4, **Book pp. 460–465 (PDF pp. 467–472)**; Lecture 5, Slide 13  
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 9, Section 9.4 *Patched conic lunar trajectories in three dimensions*, **Book pp. 461–468 (PDF pp. 468–475)**; Lecture 5, Slide 13  
 > **【正确答案】**: **C**  
 > **【0基础白话直观图像】**:  
 > 这是一个纯粹而优雅的立体几何定理：转移平面的定义包含了地心和月球球心 $\mathbf{r}_m$，也就是说，**地月连线（圆锥的对称中轴线）本身就严格位于转移平面内**！任何通过圆锥中轴线的平面去纵向劈开圆锥，必定沿锥面两侧剖切出**严格且仅有的两条母线交线（Exactly two lines）**！这直接对应了二次方程解出的两个单位向量根 $\pm\hat{\mathbf{b}}$。  
@@ -336,7 +336,7 @@ In the Earth-centred equation of motion for numerical trajectory integration ($\
 - C. It subtracts the Earth's atmosphere drag from the Moon's SOI.  
 - D. It models the solar radiation pressure acting on the spacecraft bus.  
 
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 9, Section 9.5, **Book p. 469 (PDF p. 476)**, Equation 9.63; Lecture 5, Slide 19  
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 9, Section 9.5 *Lunar trajectories by numerical integration*, **Book pp. 469–476 (PDF pp. 476–483)**, Equation 9.63; Lecture 5, Slide 19  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 地球不是固定在宇宙虚空中的钉子！地球自身在月球引力拉扯下，正以加速度 $\mu_m \frac{\mathbf{r}_m}{r_m^3}$ 不断奔向月球。当我们以地心为参考系原点写牛顿第二定律时，地心是非惯性参考系，必须把**参考系原点本身的牵连加速度减掉**。因此月球摄动项本质上是“月球对飞船的直接引力”减去“月球对地球原点的牵连引力”。  
@@ -352,7 +352,7 @@ The Lunar Reconnaissance Orbiter (LRO) executes station-keeping burns every few 
 - C. The spacecraft runs out of electrical power whenever an out-of-plane burn is executed.  
 - D. Eccentricity can only be trimmed when the spacecraft is eclipsed by the Earth.  
 
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 10, Section 10.8, **Book pp. 529–532 (PDF pp. 536–539)**; Lecture 6, Slide 29 & Slide 31  
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 10, Section 10.10 *Lunar gravity*, **Book pp. 529–535 (PDF pp. 536–542)**; Lecture 6, Slide 29 & Slide 31  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 这是深空测控中最经典的“生死与精度之辩”：月球内部质量瘤（Mascons）会自发刺激轨道偏心率狂暴增长——**偏心率一变大，近月点高度立刻砸入地下，飞船数周内粉身碎骨彻底毁灭（Ends the orbit）**！所以必须每月点火削平偏心率。而倾角每年飘了 $0.4^\circ$，只是让相机对极区的扫描边缘稍稍挪移了一点点（Costs coverage），飞船依然活得好好的。保命永远第一，保精度靠后。  
@@ -368,7 +368,7 @@ A lunar orbit is configured as a 'frozen orbit' (such as low frozen orbits near 
 - C. The spacecraft is locked into the exact rotation period of the lunar mantle.  
 - D. The orbit is completely immune to Earth's tidal gravitational forces.  
 
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 10, Section 10.8, **Book pp. 529–532 (PDF pp. 536–539)**; Lecture 6, Slide 29 & Slide 41  
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 10, Section 10.10 *Lunar gravity*, **Book pp. 529–535 (PDF pp. 536–542)**; Lecture 6, Slide 29 & Slide 41  
 > **【正确答案】**: **B**  
 > **【0基础白话直观图像】**:  
 > 永远记住讲义 Slide 41 的定性暴击：**Nothing cancels vectorially（没有任何引力在空间中矢量抵消）！** 引力摄动每时每刻都在拉扯飞船。冻结轨道的真正本质是：通过精密调谐几何参数（倾角、偏心率、近拱点方向），使摄动函数在一个完整轨道周期内的**长期平均变化率积分为零（$\frac{de}{dt} \approx 0, \frac{d\omega}{dt} \approx 0$）**！轨道根数停止漂移，卫星得以在恶劣的非球形引力场中长寿生存。NASA Gateway 的 9:2 NRHO 更是利用与朔望月共振，完美消除了长达数小时的地影日食。  

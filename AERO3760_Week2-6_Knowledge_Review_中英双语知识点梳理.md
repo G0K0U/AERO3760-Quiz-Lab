@@ -32,7 +32,7 @@
 
 ### 🟢 1. Pass 基础阶 (1.0 分题) · 秒杀物理铁律
 1. **冲量机动两假定**：位置空间绝对连续不变（$\mathbf{r}^+ = \mathbf{r}^-$），速度向量瞬时跳跃跳变（$\mathbf{v}^+ = \mathbf{v}^- + \Delta\mathbf{v}$）。*(周末真题 Q3)*
-2. **三体数值积分地月轨道逆行判据 (Retrograde near the Moon)**：真实三体引力场是非中心力场，瞬时速度 $\mathbf{v}$ 与瞬时总加速度 $\mathbf{a}$ 张成局域轨道面，其法向量为副法线 $\hat{\mathbf{b}} = \frac{\mathbf{v} \times \mathbf{a}}{|\mathbf{v} \times \mathbf{a}|}$。局域倾角 $i = \arccos(\hat{\mathbf{b}} \cdot \hat{\mathbf{K}})$ 描述的是**局域轨道平面法向与月球自转极轴的夹角 (Local plane's normal against the polar axis)**。飞船在奔月途中为顺行（$i \approx 16^\circ$），接近月球时曲率面剧烈翻转使得 $i > 90^\circ$（在近月点 $i \approx 156^\circ$），呈现绕月逆行！*(周末真题 Q1, Curtis 9.4 p.459 Fig. 9.16 & Wk6 Lec 5 Slide 22-24)*
+2. **三体数值积分地月轨道逆行判据 (Retrograde near the Moon)**：真实三体引力场是非中心力场，瞬时速度 $\mathbf{v}$ 与瞬时总加速度 $\mathbf{a}$ 张成局域轨道面，其法向量为副法线 $\hat{\mathbf{b}} = \frac{\mathbf{v} \times \mathbf{a}}{|\mathbf{v} \times \mathbf{a}|}$。局域倾角 $i = \arccos(\hat{\mathbf{b}} \cdot \hat{\mathbf{K}})$ 描述的是**局域轨道平面法向与月球自转极轴的夹角 (Local plane's normal against the polar axis)**。飞船在奔月途中为顺行（$i \approx 16^\circ$），接近月球时曲率面剧烈翻转使得 $i > 90^\circ$（在近月点 $i \approx 156^\circ$），呈现绕月逆行！*(周末真题 Q1, Curtis Chapter 9, Section 9.5, Book p. 472 (PDF p. 479) Fig. 9.16 & Wk6 Lec 5 Slides 22-24)*
 3. **地月霍曼转移两次点火量级**：近地点点火（$\Delta v_1 \approx 3.14\text{ km/s}$）是远地点点火（$\Delta v_2 \approx 0.83\text{ km/s}$）的近 4 倍（**a factor of several**）。*(周末真题 Q2)*
 4. **齐奥尔科夫斯基火箭方程**：固定干重下，推进剂质量对速度增量呈**指数依赖（Exponentially）**，每一段新加速都比前一段更昂贵。*(周末真题 Q4)*
 5. **影响球内引力模型**：二体拼接（Patched-conic）在影响球内**仅仅保留月球引力**，坚决不保留地球引力。*(周末真题 Q19)*
@@ -128,7 +128,7 @@
 # 模块一：Week 2 轨道机动与推进基础 (Orbit Manoeuvres & Propulsion Basics)
 
 ### 1. 冲量机动假定与真近点角扫过弧度 (Impulsive Burn Assumption)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.1 *Impulsive maneuvers*, **Book p. 287 (PDF p. 294)**; Section 6.9, **Book pp. 329–331 (PDF pp. 336–338)**
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.2 *Impulsive maneuvers*, **Book pp. 287–289 (PDF pp. 294–296)**; Section 6.10 *Nonimpulsive orbital maneuvers*, **Book pp. 329–335 (PDF pp. 336–342)**
 
 #### 1.1 什么是冲量机动假定？（0 基础人话图像）
 - 在现实中，火箭发动机点火需要持续几十秒甚至上千秒。但在经典的开普勒轨道计算中，推导公式极度复杂。
@@ -177,7 +177,7 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 ---
 
 ### 3. 霍曼双脉冲转移与为什么第二点火不能省 (Hohmann Transfer)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.2 *Hohmann transfer*, **Book pp. 289–295 (PDF pp. 296–302)**, Equations 6.1–6.11, Example 6.1
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.3 *Hohmann transfer*, **Book pp. 289–295 (PDF pp. 296–302)**, Equation 6.13, Example 6.1
 
 #### 3.1 霍曼转移的几何全景
 德国工程师瓦尔特·霍曼在 1925 年提出：在两条**同心圆、共面**轨道之间，用一条两端分别与它们相切的椭圆来转移，是**燃料消耗最少（最优）的双脉冲机动**。
@@ -221,7 +221,7 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 # 模块二：Week 2 & 3 替代转移、调相与矢量机动 (Advanced Manoeuvres)
 
 ### 4. 双椭圆转移与三大临界阈值 (Bi-elliptic Transfer Thresholds)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.3 *Bielliptic Hohmann transfer*, **Book pp. 295–298 (PDF pp. 302–305)**, Equations 6.12–6.18, Figure 6.7, Example 6.2
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.4 *Bielliptic Hohmann transfer*, **Book pp. 295–298 (PDF pp. 302–305)**, Equations 6.16–6.18, Figure 6.7, Example 6.2
 
 #### 4.1 什么是双椭圆转移？（曲线救国的物理玄机）
 - 霍曼转移只点两次火，而双椭圆转移（Bi-elliptic transfer）点**三次火**。
@@ -240,7 +240,7 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 ---
 
 ### 5. 同轨调相：反常识的“减速超车” (Orbital Phasing)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.4 *Phasing maneuvers*, **Book pp. 298–303 (PDF pp. 305–310)**, Equations 6.19–6.25, Example 6.3 & 6.4
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.5 *Phasing maneuvers*, **Book pp. 298–308 (PDF pp. 305–315)**, Equations 6.19–6.25, Example 6.3 & 6.4
 
 #### 5.1 场景描述
 空间站（Target）和追击飞船（Chaser）在同一条圆轨道上，但空间站跑在飞船前面 $\Delta\theta$ 的位置。飞船如何追上空间站？
@@ -261,7 +261,7 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 ---
 
 ### 6. 离拱点非霍曼与矢量速度改变 (Off-Apsis Transfers & Vector Delta-v)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.5–6.6, **Book pp. 303–313 (PDF pp. 310–320)**, Equations 6.26–6.34, Example 6.5 & 6.6
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.6 *Non-Hohmann transfers with a common apse line* (Book pp. 303–308, PDF pp. 310–315) & Section 6.7 *Apse line rotation* (Book pp. 308–313, PDF pp. 315–320), Example 6.7 & 6.8
 
 #### 6.1 离开拱点后，速度有了方向夹角
 - 在近地点（Perigee）和远地点（Apogee），航迹角 $\gamma = 0$，速度方向纯粹垂直于地心连线（当地水平）。
@@ -285,7 +285,7 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 # 模块三：Week 3 L4 平面改变与低推力 (Plane Changes & Low Thrust)
 
 ### 7. 轨道平面改变：太空中最昂贵的抢劫 (Plane Changes)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.8 *Plane change maneuvers*, **Book pp. 317–324 (PDF pp. 324–331)**, Equations 6.35–6.37, Example 6.9 & 6.10
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.9 *Plane change maneuvers*, **Book pp. 317–328 (PDF pp. 324–335)**, Equations 6.26, 6.30, 6.32, Example 6.9 & 6.10
 
 #### 7.1 24 度变面惊人定律：转个弯代价等于逃逸地球！
 纯粹转动轨道平面角度 $\delta$（速度大小不变）的公式为：
@@ -311,7 +311,7 @@ $$\Delta v = 2 v \sin\left(\frac{\delta}{2}\right)$$
 ---
 
 ### 8. 发射方位角与纬度极限 (Launch Azimuth & Inclination Limit)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.8, **Book pp. 326–328 (PDF pp. 333–335)**, Equation 6.38b, Example 6.11
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.9 *Plane change maneuvers*, **Book pp. 326–328 (PDF pp. 333–335)**, Equation 6.38b, Example 6.11
 
 #### 8.1 核心公式与推导
 火箭从地球表面发射，地球从西向东自转，给火箭免费赠送了一个东向的线速度。
@@ -329,7 +329,7 @@ $$\cos i = \cos \phi \sin A_0$$
 ---
 
 ### 9. 低推力电推进连续螺旋 (Continuous Low-Thrust Spiral)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.9 *Nonimpulsive orbital maneuvers*, **Book pp. 329–335 (PDF pp. 336–342)**, Equation 6.39, Example 6.12
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.10 *Nonimpulsive orbital maneuvers*, **Book pp. 329–335 (PDF pp. 336–342)**, Equation 6.39, Example 6.12
 
 - **工作机制**：与化学火箭几分钟的暴烈冲量不同，离子推进器推力极微弱，沿轨道切线方向连续喷火数月甚至数年。
 - **几何轨迹**：飞船以肉眼不可见的速度慢慢盘旋展开，轨道在每一个瞬间都几乎是圆，从低圆轨道缓缓盘旋成高圆轨道。
@@ -362,7 +362,7 @@ $$\cos i = \cos \phi \sin A_0$$
 ---
 
 ### 11. 拉普拉斯影响球模型：引力并不平衡的建模边界 (Laplace SOI)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 8, Section 8.2, **Book pp. 392–397 (PDF pp. 399–404)**; Chapter 9, **Book p. 440 (PDF p. 447)**
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 8, Section 8.4 *Sphere of influence*, **Book pp. 392–396 (PDF pp. 399–403)**, Equation 8.24; Chapter 9, Section 9.2, **Book p. 440 (PDF p. 447)**
 
 #### 11.1 影响球半径公式与推导
 $$R_S = D \left(\frac{m_{\text{moon}}}{m_{\text{earth}}}\right)^{2/5} = 384,400 \times \left(\frac{7.348 \times 10^{22}}{5.974 \times 10^{24}}\right)^{2/5} \approx \mathbf{66,183\text{ km}}$$
@@ -420,7 +420,7 @@ $$\Delta v_{\text{LOI}} = v_{p2} - \sqrt{\frac{\mu_m}{r_{p2}}} = \sqrt{\frac{\mu
 ---
 
 ### 14. 飞越偏转角与阿波罗 8 字形自由返回 (Flybys & Apollo Free Return)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 8, Section 8.5 *Planetary flyby*, **Book pp. 412–418 (PDF pp. 419–425)**; Chapter 9, **Book pp. 450–456 (PDF pp. 457–463)**
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 8, Section 8.9 *Planetary flyby*, **Book pp. 412–420 (PDF pp. 419–427)**, Equations 8.41, 8.44; Chapter 9, Section 9.2, **Book pp. 450–456 (PDF pp. 457–463)**
 
 #### 14.1 双曲线转向角
 $$\delta_{\text{turn}} = 2 \arcsin\left(\frac{1}{e_2}\right)$$
@@ -436,7 +436,7 @@ $$\delta_{\text{turn}} = 2 \arcsin\left(\frac{1}{e_2}\right)$$
 # 模块六：Week 6 3D转移、受限三体与环月轨道设计 (3D, 3-Body & Lunar Orbits)
 
 ### 15. 3D地月转移、白道振荡与 Simpson 拟合有效期 (3D Conics & Ephemeris)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.3 *A simplified lunar ephemeris* & Section 9.4 *Patched conic lunar trajectories in three dimensions*, **Book pp. 457–468 (PDF pp. 464–475)**, Equations 9.40–9.62
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.3 *A simplified lunar ephemeris* (Book pp. 457–460, PDF pp. 464–467) & Section 9.4 *Patched conic lunar trajectories in three dimensions* (Book pp. 461–468, PDF pp. 468–475), Equations 9.40–9.62, Table 9.1, Fig. 9.9
 
 #### 15.1 白道倾角振荡（18.6 年大时钟）
 月球绕地球轨道平面（白道）受太阳引力潮汐摄动，其升交点以 **18.6 年** 为周期在空间进动，导致月球对地球赤道的倾角剧烈晃荡：
@@ -453,7 +453,7 @@ $$i_m = 23.44^\circ \pm 5.14^\circ \in [\mathbf{18.3^\circ, 28.6^\circ}]$$
 ---
 
 ### 16. 圆型受限三体动力学与 RK4 漂移灾难 (CR3BP & RK4 Reality)
-> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.5 *Lunar trajectories by numerical integration*, **Book pp. 469–479 (PDF pp. 476–486)**, Equations 9.63–9.69 & Example 9.4
+> 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.5 *Lunar trajectories by numerical integration*, **Book pp. 469–476 (PDF pp. 476–483)**, Equations 9.63–9.69 & Example 9.3; Chapter 2, Section 2.12 *Circular restricted three-body problem* (Book pp. 116–131, PDF pp. 123–138)
 
 #### 16.1 受限三体运动微分方程（CR3BP）
 $$\ddot{\mathbf{r}} = -\frac{\mu_e}{r^3}\mathbf{r} + \mu_m \left[\frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3}\right]$$
@@ -469,7 +469,7 @@ $$\ddot{\mathbf{r}} = -\frac{\mu_e}{r^3}\mathbf{r} + \mu_m \left[\frac{\mathbf{r
 ---
 
 ### 17. 月球质量瘤、冻结轨道与 Artemis / Gateway (Mascons, Frozen Orbits & NRHO)
-> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 10, Section 10.8 *Lunar gravity potential*, **Book pp. 529–532 (PDF pp. 536–539)**; Lecture 6 Slides *Wk04-06_Lunar_Trajectories_L5_L6.pdf*, pp. 42–65
+> 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 10, Section 10.10 *Lunar gravity*, **Book pp. 529–535 (PDF pp. 536–542)**; Lecture 6 Slides *Wk04-06_Lunar_Trajectories_L5_L6.pdf*, pp. 42–65
 
 #### 17.1 月球质量瘤（Mascons）与低月轨道的不稳定性
 - 月球没有大气，但月海地下深埋着高密度玄武岩熔岩块——**质量瘤（Mass Concentrations, Mascons）**。

@@ -87,7 +87,7 @@ A student worries that the three-dimensional patched conic is a new method to le
 - **D. the same equations as the planar case, with a third component added**  
 
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**:  
-> - Curtis Chapter 9, Section 9.4 *Patched conic lunar trajectories in three dimensions*, **Book pp. 460–468 (PDF pp. 467–475)**  
+> - Curtis Chapter 9, Section 9.4 *Patched conic lunar trajectories in three dimensions*, **Book pp. 461–468 (PDF pp. 468–475)**  
 > - Lecture 5 Slides, **Slide 11** (*"Patched conic in 3D: same method, more components"*)  
 >
 > **【正确答案】**: **D**  
@@ -175,7 +175,7 @@ The 3D transfer plane is built from the parking position and the Moon's centre, 
 - D. forced, because the craft must fly in the Moon's plane  
 
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**:  
-> - Curtis Chapter 9, Section 9.4, **Book pp. 460–463 (PDF pp. 467–470)**  
+> - Curtis Chapter 9, Section 9.4, **Book pp. 461–463 (PDF pp. 468–470)**  
 > - Lecture 5 Slides, **Slide 12** (*"Which two points? ... r1 is not known yet, so Curtis chooses the plane through r0 and rm"*), **Slide 13** (*"The plane was the first convention; the side is the second"*)  
 >
 > **【正确答案】**: **A**  
@@ -196,7 +196,7 @@ Two integrations of the same departure are each refined until the answer stops m
 - D. refining the step is not a valid test of a result  
 
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**:  
-> - Curtis Chapter 9, Section 9.5, **Book pp. 469–479 (PDF pp. 476–486)**  
+> - Curtis Chapter 9, Section 9.5, **Book pp. 469–476 (PDF pp. 476–483)**  
 > - Lecture 5 Slides, **Slide 21 & Slide 26** (*"Two methods, two purposes: Numerical propagation gives a trajectory consistent with the force model you specify"*), **Slide 25** (*"Same constants, same circular Moon as Lecture 4... step halving: 1 km at perilune"*)  
 >
 > **【正确答案】**: **A**  
@@ -261,7 +261,7 @@ Most low lunar orbits decay within months. The cause is:
 - D. the Earth's tidal pull on the orbit plane  
 
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**:  
-> - Curtis Chapter 10, Section 10.8 *Lunar gravity potential*, **Book pp. 529–532 (PDF pp. 536–539)**  
+> - Curtis Chapter 10, Section 10.10 *Lunar gravity*, **Book pp. 529–535 (PDF pp. 536–542)**; Lecture 6 Slides 26–32  
 > - Lecture 6 Slides, **Slide 29** (*"Low lunar orbit is unstable: Mascons bite... The Moon's gravity field is lumpy: dense mass concentrations (mascons) under the maria. A low circular orbit is perturbed so strongly it can de-orbit in months."*)  
 >
 > **【正确答案】**: **B**  
@@ -300,7 +300,7 @@ A relay orbit is given a high eccentricity in order to:
 - D. keep its period matched to the month  
 
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**:  
-> - Curtis Chapter 6, Section 6.4 & Chapter 9;  
+> - Curtis Chapter 2, Section 2.7 *Elliptical orbits* (Kepler's 2nd Law: Area speed conservation) & Chapter 9; Lecture 6 Slides 35–37;  
 > - Lecture 6 Slides, **Slide 35 & Slide 41** (*"Dwell is bought with eccentricity: Queqiao-2... Kepler’s second law does the work: at apolune the craft moves at 0.233 km/s against 2.136 at perilune, so 76% of every period is spent in the far half, hanging over the pole where the link is needed."*)  
 >
 > **【正确答案】**: **C**  
@@ -439,7 +439,7 @@ A frozen lunar orbit is held at particular values of inclination, eccentricity a
 - D. the perturbing forces cancel one another out vectorially  
 
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**:  
-> - Curtis Chapter 10, Section 10.8 *Lunar gravity potential*, **Book pp. 529–532 (PDF pp. 536–539)**  
+> - Curtis Chapter 10, Section 10.10 *Lunar gravity*, **Book pp. 529–535 (PDF pp. 536–542)**; Lecture 6 Slides 26–32  
 > - Lecture 6 Slides, **Slide 29 & Slide 41** (*"Frozen condition: choose i, e, ω and the orbit’s orientation so the combined perturbations leave little secular drift in e and ω. Nothing cancels vectorially; the elements stop marching. You tune the orbit, not the perturbation."*)  
 >
 > **【正确答案】**: **B**  

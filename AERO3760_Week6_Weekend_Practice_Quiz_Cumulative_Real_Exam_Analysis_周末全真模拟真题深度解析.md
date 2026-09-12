@@ -103,7 +103,7 @@
 > - 当深入月球引力场接近月球时，月球引力接管主导，轨道曲率平面发生剧烈翻转，局域法向 $\hat{\mathbf{b}}$ 与月球极轴 $\hat{\mathbf{K}}$ 的夹角翻过 $90^\circ$（在近月点达到 $i \approx 156^\circ > 90^\circ$），即 $\hat{\mathbf{b}} \cdot \hat{\mathbf{K}} < 0$！  
 > 因此，报告为“逆行（Retrograde near the Moon）”，**是一个关于局域轨道平面法向量与月球极轴相对夹角的严格三维空间几何陈述（The local plane's normal against the polar axis）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.4 *Numerical integration of lunar trajectories*, Book pp. 456–461 (PDF pp. 463–468)，尤其是 Example 9.3 与 Fig. 9.16 (Book p. 459, PDF p. 466) 明确指出地月自由返回轨道在接近月球时局部倾角翻过 90°：`The trajectory becomes retrograde (i > 90 deg) as it approaches the moon`；以及 Section 9.2 (Book p. 445, PDF p. 452) 判据：`if \hat{h}_2 \cdot \hat{k} < 0, then the motion around the moon is retrograde (clockwise)`。讲义对应：Week 6 Lecture 5 Slides 22–24 (Slide 22 *Binormal gives the local inclination: \hat{b} = (v x a)/|v x a|, i = cos^-1(\hat{b} \cdot \hat{K})* & Slide 24 *Retrograde, and where exactly you say so: both read ~156 deg at perilune, a retrograde pass about the Moon*).  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.5 *Lunar trajectories by numerical integration*, Book pp. 469–476 (PDF pp. 476–483)，尤其是 Example 9.3 与 Fig. 9.16 (Book p. 459/472, PDF p. 466/479) 明确指出地月自由返回轨道在接近月球时局部倾角翻过 90°：`The trajectory becomes retrograde (i > 90 deg) as it approaches the moon`；以及 Section 9.2 (Book p. 445, PDF p. 452) Eq. 9.33 判据：`if \hat{h}_2 \cdot \hat{k} < 0, then the motion around the moon is retrograde (clockwise)`。讲义出处：AERO3760 Week 6 Lecture 5 Slides 22–24 (Slide 22 *Binormal gives the local inclination: \hat{b} = (v x a)/|v x a|, i = cos^-1(\hat{b} \cdot \hat{K})* & Slide 24 *Retrograde, and where exactly you say so: both read ~156 deg at perilune, a retrograde pass about the Moon*).  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 是日常语言直觉陷阱：以为逆行是“倒退航行”，实际上飞船一直在向前高速飞行，只是局域法线偏向月球南极方向。  
 > - 选项 C 混淆了反向减速点火（Retro-burn / Braking burn）与轨道空间取向（Retrograde orbit）。  
@@ -134,7 +134,7 @@
 > **【0基础白话直观图像】**:  
 > 从 300 km 低地球轨道（LEO，半径约 6678 km）出发，圆轨道速度高达 $v_{c1} \approx 7.73\text{ km/s}$。要被甩到 384,400 km 外的月球轨道，近地点第一次点火（TLI）必须加速到 $v_{t1} \approx 10.87\text{ km/s}$，点火增量 $\Delta v_1 \approx 3.14\text{ km/s}$！而当飞船爬升 5 天到达月球距离的远地点时，受地球引力势能消耗，飞船速度已经衰减到慢吞吞的 $v_{t2} \approx 0.19\text{ km/s}$。若在远地点将轨道圆化到月球距离，所需速度为 $v_{c2} \approx 1.02\text{ km/s}$，第二次点火只需 $\Delta v_2 = 1.02 - 0.19 = 0.83\text{ km/s}$。近地点点火（3.14 km/s）是远地点点火（0.83 km/s）的近 **4 倍（a factor of several）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.2 *Hohmann transfer*, Book pp. 288–294 (PDF pp. 295–301); Curtis Example 6.1.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.3 *Hohmann transfer*, Book pp. 289–295 (PDF pp. 296–302)，尤其是 Example 6.1 (Book pp. 292–294, PDF pp. 299–301)；讲义出处：Week 2 Lecture 2 *Hohmann Transfer*.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A/C 误以为远地点离地球那么远，肯定需要更强推力把飞船拉平，忽视了活力公式（Vis-viva）决定了在深引力势阱底部的近地点需要注入绝大部分能量。  
 > - 选项 B 误记了近圆轨道对称转移的错觉，地月轨道半径比高达 $384400/6678 \approx 57.5$，极不对称。  
@@ -164,7 +164,7 @@
 > **【0基础白话直观图像】**:  
 > 冲量点火的物理假定就两句话：点火发生在电光石火的一瞬间（$\Delta t \to 0$）。飞船在三维空间中根本来不及移位，点火前一微秒与点火后一微秒在同一位置（$\mathbf{r}^+ = \mathbf{r}^-$）；而发动机的推力在瞬时积分成一个速度增量，速度瞬间跳变（$\mathbf{v}^+ = \mathbf{v}^- + \Delta\mathbf{v}$）。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.1 *Impulsive maneuvers*, Book p. 287 (PDF p. 294).  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.2 *Impulsive maneuvers*, Book pp. 287–288 (PDF pp. 294–295)；讲义出处：Week 2 Lecture 1 *Impulsive Manoeuvres*.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 彻底搞反了位置与速度，空间位置绝不可能瞬移！  
 > - 选项 C 违背火箭推进本质，点火必须喷射工质，质量必然减少。  
@@ -197,7 +197,7 @@
 > > $\displaystyle m_p = m_f \left[\exp\left(\frac{\Delta v}{I_{sp} g_0}\right) - 1\right]$  
 > 由于指数函数 $\exp(x)$ 极度陡峭，为了给飞船多加速 $1\text{ km/s}$，火箭不仅要喷射工质推飞船，还得先带上为了推飞船所需工质的工质！推进剂成本随 $\Delta v$ 指数暴增！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.1, Book p. 288 (PDF p. 295), Eq. 6.6.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.2 *Impulsive maneuvers*, Book p. 288 (PDF p. 295), Eq. 6.6；讲义出处：Week 2 Lecture 1 *Rocket Equation*.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 是日常最容易犯的线性思维陷阱（以为加速 2 倍只需要 2 倍燃料）。  
 > - 选项 B 混淆了动能公式（$\Delta E_k \propto v^2$）与工质质量关系。  
@@ -227,7 +227,7 @@
 > **【0基础白话直观图像】**:  
 > 判断点火能不能当作冲量，最核心的物理判据就是**时间占空比**：点火工作时间 $t_{\text{burn}}$ 占整个轨道周期 $T$ 的比例是否极小（$t_{\text{burn}}/T \ll 1$，通常小于 1%~2%）。只有点火时间极短，飞船才来不及在轨道上产生显著位移，点火期间的引力损耗和方向转弯损耗才可以忽略不计。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.1, Book p. 287 (PDF p. 294); Week 2 Lecture *Orbit Manoeuvres*.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.2 *Impulsive maneuvers*, Book p. 287 (PDF p. 294)；讲义出处：Week 2 Lecture 1 *Impulsive Assumption Validity*.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 拿具体的数值（1 km/s）做诱饵，实际上阿波罗登月 TLI 点火高达 3.1 km/s 依然完美按冲量处理。  
 > - 选项 C 忽视了即便是化学发动机，如果在极低轨道长达几十分钟慢喷，同样不能算冲量。  
@@ -257,7 +257,7 @@
 > **【0基础白话直观图像】**:  
 > 太阳巨大的引力摄动对地月系统产生力矩。月球绕地球公转的轨道面（白道面）相对于**黄道面（地球绕太阳公转面）**保持约 $5.14^\circ$ 的恒定夹角。在太阳引力力矩作用下，白道面的法向量像陀螺一样，严格围绕着**黄道面法线（Ecliptic Normal）**做圆锥进动，每 18.6 年（6798天）转一整圈！正是这个绕黄道法线的进动，叠加上地球赤道倾角 $23.44^\circ$，导致月球对地球赤道的倾角在 $23.44^\circ \pm 5.14^\circ \in [18.3^\circ, 28.6^\circ]$ 之间往复摇摆。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.3, Book pp. 450–454 (PDF pp. 457–461); Week 6 Thursday Quiz Q2; Week 5 Lecture 5.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.3 *A simplified lunar ephemeris*, Book pp. 457–460 (PDF pp. 464–467)，尤其是 Book p. 460 (PDF p. 467) Table 9.1 与 Fig. 9.9；讲义出处：Week 6 Lecture 5 Slide 8 *The 18.6-year nodal cycle*; Week 6 Thursday Quiz Q2.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 是最高频的陷阱！很多人以为既然测量的是对地球赤道的倾角，进动轴就一定是地球自转轴。大错特错！驱动该进动的是太阳引力，因此其进动法线是太阳系的黄道法线！  
 > - 选项 B/C 周期量级完全不对。  
@@ -287,7 +287,7 @@
 > **【0基础白话直观图像】**:  
 > 根据开普勒椭圆几何，飞船从近地点出发向上爬升，距离地心越来越远，直到真近点角 $\theta = 180^\circ$ 达到自身远地点 $r_a$。如果在到达远地点之前（例如在爬升途中 $\theta < 180^\circ$），距离就已经达到了月球轨道距离 $r_m$，那么由于远地点是该椭圆上距离地心最远的点，远地点距离自然必须大于月球轨道距离（$r_a > r_m$）！这就是工程中常用的“快速大椭圆转移（Fast Transfer）”，通过把远地点甩到月球外侧，换取极短的奔月飞行时间。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.2, Book pp. 440–443 (PDF pp. 447–450); Week 4 Lecture 2.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 *Coplanar patched conic lunar trajectories*, Book pp. 440–444 (PDF pp. 447–451)；讲义出处：Week 4 Lecture 2 & Week 5 Lecture 3 Slide 13.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 描述的是经典霍曼转移，霍曼转移恰好在远地点交会（$\theta = 180^\circ$），与题干“well before reaches apogee”直接矛盾。  
 > - 选项 B 误以为超过月球就是双曲线逃逸，实际上只要 $e < 1$，远地点再远也是有限实数。  
@@ -319,7 +319,7 @@
 > > $\displaystyle \mathbf{p} = \mu_m \left[ \frac{\mathbf{r}_{m/s}}{r_{m/s}^3} - \frac{\mathbf{r}_m}{r_m^3} \right]$  
 > 当飞船距离月球还很远时，飞船到月球的距离与地心到月球的距离几乎一样，这两个力在大小和方向上几乎完全等大反向，直接相互抵消（Cancelled by pull on frame's origin）！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 10, Section 10.2, Book pp. 493–498 (PDF pp. 500–505); Week 6 Thursday Quiz Q4; Week 6 Lecture 5.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 10, Section 10.5 *Gravitational perturbations* 与 Section 10.10 *Lunar gravity*, Book pp. 487–494, 529–535 (PDF pp. 494–501, 536–542)；讲义出处：Week 6 Lecture 5 Slide 18; Week 6 Thursday Quiz Q4.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 把影响球当成了物理防空罩，影响球只是人类数学分段计算的虚拟假想球面，真实重力场无处不在。  
 > - 选项 B 答非所问。  
@@ -353,7 +353,7 @@
 > - 只有在抛物线逃逸边界上，$a \to \infty$，才有 $C_3 = 0$；  
 > - 飞出引力势阱的双曲线（Hyperbola），$a < 0$，才有双曲线超额能量 $C_3 > 0$。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 2, Section 2.8, Book pp. 91–95 (PDF pp. 98–102); Curtis Chapter 8, Book p. 410.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 2, Section 2.8 *Energy of an elliptical orbit* & Section 2.9 *Hyperbolic trajectories*, Book pp. 91–98 (PDF pp. 98–105)；Chapter 8, Book p. 410 (PDF p. 417)；讲义出处：Week 4 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B/D 误以为远拱点飞得极高就接近逃逸，只要飞船没完全摆脱引力束缚，它就依旧是闭合椭圆，其 $C_3$ 坚决小于 0！  
 > **【考场一秒题眼】**: 看到 `bound orbit, however high apoapsis, has characteristic energy` $\to$ 选 `C3 less than zero, since a is finite and positive`。
@@ -382,7 +382,7 @@
 > **【0基础白话直观图像】**:  
 > 在 3D 拼接锥线设计之初，两点定平面：地心出发点 $\mathbf{r}_0$ 与月球中心位置 $\mathbf{r}_m$ 叉乘定义了初始轨道平面法向量 $\mathbf{h}_1 = \mathbf{r}_0 \times \mathbf{r}_m$。但飞船最终并不是瞄准月球中心撞击，而是在月球影响球边界球面上以交会张角 $\lambda$ 擦过（交点为 $\mathbf{r}_1$）。因此以月球中心构建平面是一个极佳的初始几何近似（Approximation），在下一级计算到达角 $\lambda$ 和月心双曲线交点时，该近似会被精确的几何闭环所消除！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.3 *Three-dimensional lunar trajectories*, Book pp. 450–455 (PDF pp. 457–462); Week 5 Lecture 5.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.4 *Patched conic lunar trajectories in three dimensions*, Book pp. 461–468 (PDF pp. 468–475)，特别是 Step I.5 与 Fig. 9.10；讲义出处：Week 6 Lecture 5 Slide 14.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A/D 误以为物理定律强制飞船与月球共面，飞船在三维空间中拥有独立倾角。  
 > - 选项 B 将物理建模中的“摄动近似迭代”降级为“随意的人为约定”。  
@@ -412,7 +412,7 @@
 > **【0基础白话直观图像】**:  
 > 在近地点时，飞船的径向速度本来就是零（$v_r = 0$，速度方向垂直于矢径）。如果发动机只沿着横向（切向）点火加速，点火后飞船的径向速度依然严格为零（$v_r^+ = 0$）！这意味着该点依然是速度与矢径严格垂直的极值点（Apsis），拱线根本没有发生旋转（Leaves the apse line unmoved），只是远地点的距离被拉高了！要旋转拱线，必须在近地点引入径向速度（$v_r \neq 0$），或者在非拱线位置点火。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.5 *Apse line rotation*, Book pp. 308–313 (PDF pp. 315–320); Lecture 3 Orbit Manoeuvres.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.7 *Apse line rotation*, Book pp. 308–313 (PDF pp. 315–320)，尤其是 Example 6.8 (Book pp. 310–313, PDF pp. 317–320)；讲义出处：Week 2 Lecture 4.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 只有在减速点火恰好将速度降为局部圆速度时才圆化，普通加速只会把轨道拉得更扁。  
 > - 选项 C/D 混淆了非横向点火。只有带有向外或向内的径向分量点火，拱线才会顺时针或逆时针转动。  
@@ -444,7 +444,7 @@
 > > $\displaystyle \frac{dr_a}{dv_p} \propto \frac{1}{(1-e)^2} \to \infty$  
 > 在逃逸悬崖边缘，速度哪怕仅仅提高 0.3%（几米每秒），远地点就会直接从 38 万公里暴涨到 60 万公里以上——**暴涨幅度超过 50%（More than half again）**！极其脆弱敏感！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.2, Book p. 444 (PDF p. 451); Week 5 Lecture 3.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 *Coplanar patched conic lunar trajectories*, Book p. 444 (PDF p. 451)；讲义出处：Week 5 Lecture 3 Slide 13.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 是经典线性思维陷阱（以为速度变 0.3%，轨道大小也变 0.3%）。  
 > - 选项 D 以为是普通的平方关系（十几倍）。这是由于接近分母奇点的指数级非线性发散。  
@@ -476,7 +476,7 @@
 > > $\displaystyle r_p = 2a_{\text{phase}} - r_0 \approx 2(6170) - 6678 = 5662\text{ km} < R_E (6378\text{ km})$  
 > 近地点直接砸进了地球地壳 700 公里深处！飞船一头撞死在地面上。这就是为什么大相位追赶必须分多圈进行！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.3 *Phasing maneuvers*, Book pp. 297–301 (PDF pp. 304–308); Curtis Example 6.4.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.5 *Phasing maneuvers*, Book pp. 298–305 (PDF pp. 305–312)，尤其是 Example 6.4 (Book p. 301, PDF p. 308)；讲义出处：Week 3 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 C 拿物理定律当幌子，开普勒定律无论如何都成立。  
 > - 选项 B/D 属于机械工程式借口，核心死因是纯轨道几何导致的地面撞击。  
@@ -508,7 +508,7 @@
 > > $\displaystyle \varepsilon = \frac{1}{2}v^2 - \frac{\mu}{r} = \text{常数}$  
 > 飞船从低轨道往高轨道爬，引力势能项 $-\mu/r$ 随着距离 $r$ 增大而变大（负得更少）；能量守恒必然要求动能项 $\frac{1}{2}v^2$ 相应减小。动能没有凭空消失，而是实打实地换成了重力势能！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 2, Section 2.7 *Conservation of energy*, Book pp. 88–90 (PDF pp. 95–97); Eq. 2.80.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 2, Section 2.5 *The energy law*, Book pp. 75–83 (PDF pp. 82–90), Eq. 2.68 & 2.70；讲义出处：Week 2 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 是常识错误，LEO 之外的大气阻力早已为零。  
 > - 选项 D 颠倒黑白，第一次点火是大幅增加动能加速，而不是移除动能。  
@@ -540,7 +540,7 @@
 > 1. **火箭发动机视角（推进剂）**：齐奥尔科夫斯基方程 $m_p = m_f (e^{\Delta v/v_e} - 1)$ 只看**绝对速度增量 $\Delta v$** 的绝对大小（以 m/s 为单位）。无论在宇宙何处，喷 0.83 km/s 所烧掉的推进剂千克数完全一致！  
 > 2. **天体力学视角（轨道形态）**：速度增量能把轨道搅动得多剧烈，取决于该点原有的基准速度！在远地点，原有速度仅 $0.19\text{ km/s}$，0.83 km/s 相当于给了它 5.4 倍的惊人增速；而在 LEO，基准速度高达 $7.8\text{ km/s}$，0.83 km/s 只是毛毛雨（刚过 10%）。所以轨道改变看的是相对比率 $\Delta v / v_c$！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.2 & Section 6.9, Book pp. 288–294; Week 2 Lecture *Orbit Manoeuvres*.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.2 (Rocket Eq. 6.6, Book p. 288, PDF p. 295) & Section 6.3 (Hohmann, Book pp. 289–294, PDF pp. 296–301)；讲义出处：Week 2 Lecture *Orbit Manoeuvres*.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 误以为 $\Delta v$ 相同轨道效果就相同，忽视了奥伯特效应（Oberth Effect）与速度基准对轨道形态的非线性放大。  
 > - 选项 A 以为在远地点点火烧的推进剂更少，火箭方程绝不认天体位置，只认绝对速度标量！  
@@ -572,7 +572,7 @@
 > > $\displaystyle I_{sp} = \frac{v_e}{g_0}$  
 > 其中的 $g_0$ 根本不是飞船当前所处环境的“局部真实重力”，而是航天工程界人为约定的**地球标准海平面重力加速度常量（$g_0 \equiv 9.80665\text{ m/s}^2$）**！它只是一个将 m/s 转换为“秒”的单位换算比例尺。不管飞船飞到月球、火星还是深空零重力区，$v_e$ 不变，$g_0$ 不变，比冲坚如磐石地依然是 300 秒！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.1, Book p. 288 (PDF p. 295); Eq. 6.7.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.2 *Impulsive maneuvers*, Book p. 288 (PDF p. 295), Eq. 6.7；讲义出处：Week 2 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 是最惨烈的常识陷阱！90% 的初学者都会下意识用月球重力除以 6，导致比冲暴跌到 50 秒。  
 > - 选项 D 误用了反比例运算。  
@@ -605,7 +605,7 @@
 > 2. **方案二（一圈被套圈）**：要让目标在一圈内反过来迎头赶上，追踪飞船必须把周期暴增整整一圈再加上剩余角：$T_{\text{slow}} = T_0 + \frac{2\pi - \Delta\theta}{2\pi} T_0$！周期的偏离量几乎达到了一整个轨道周期！  
 > 根据开普勒第三定律 $a \propto T^{2/3}$，周期偏离越远，轨道半长轴改变越大，所需的机动 $\Delta v$ 就会呈爆发式暴增！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.3, Book pp. 297–300 (PDF pp. 304–307); Week 3 Lecture 1.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.5 *Phasing maneuvers*, Book pp. 298–305 (PDF pp. 305–312)；讲义出处：Week 3 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 是典型的钟表时间直觉误区（以为时间一样燃耗就一样）。  
 > - 选项 A 凭空捏造“减速比加速省燃料”的荒谬规则。  
@@ -637,7 +637,7 @@
 > - **束缚椭圆（Bound Ellipse）**：比能量 $\varepsilon < 0$，偏心率 $e < 1$。它是一个封闭的周期性椭圆轨道！即便与月球擦肩而过，只要没有受到外力，飞船在远地点掉头后，历经一个周期 $T = 2\pi\sqrt{a^3/\mu_e}$ 必定精确返回初始近地点。  
 > - **双曲线轨道（Hyperbolic Departure）**：比能量 $\varepsilon > 0$（速度超过逃逸速度 $v > v_{\text{esc}}$），偏心率 $e > 1$。这是一条开放的单向发散轨道，飞船一旦飞出就永不回头，直奔深空无穷远，绝对不可能重返近地点！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 2, Section 2.8 & 2.9, Book pp. 91–105 (PDF pp. 98–112); Week 4 Lecture 2.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 2, Section 2.8 (Elliptic orbit) & Section 2.9 (Hyperbolic trajectory), Book pp. 91–98 (PDF pp. 98–105)；讲义出处：Week 4 Lecture 2.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 误以为超过月球轨道就是“脱离地球”，实际上地球真正的拉格朗日引力范围（希尔球 Hill Sphere）远达 150 万公里，38 万公里的月球距离依然深陷在地球束缚区内。  
 > - 选项 A 将双曲线的开放轨迹误当成了闭合轨道。  
@@ -667,7 +667,7 @@
 > **【0基础白话直观图像】**:  
 > 二体拼接锥线法（Patched-Conic Method）的根本哲学就是“画界分治，非此即彼”：在全宇宙空间中，同一时刻只承认**一个中心天体**！在影响球外，中心天体是地球（只算地心引力，彻底忽略月球）；一旦穿过月球影响球界面，立刻将中心天体切换为月球（只算月心二体双曲线引力，彻底忽略地球）！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 8, Section 8.3 & Chapter 9, Section 9.2, Book pp. 440–442 (PDF pp. 447–449); Week 5 Lecture 2.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 8, Section 8.4 *Sphere of influence* & Section 8.5 *Method of patched conics*, Book pp. 392–397 (PDF pp. 399–404)；Chapter 9, Section 9.2, Book pp. 440–445 (PDF pp. 447–452)；讲义出处：Week 5 Lecture 2.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 是真实三体问题（Numerical 3-Body Problem）的力学方程，二体拼接之所以能够给出解析闭式解，正是因为它坚决不同时计算两个天体引力！  
 > **【考场一秒题眼】**: 看到 `inside Moon's sphere of influence patched-conic keeps` $\to$ 选 `only the Moon's gravity`。
@@ -698,7 +698,7 @@
 > > $\displaystyle F = G \frac{M m}{r^2} \implies g(r) = \frac{\mu}{r^2}$  
 > 只要距离 $r$ 是有限实数，无论飞到几亿公里远，引力永远大于零！它会随着距离平方衰减得极微弱，但数学上只有在 $r \to \infty$ 时才真正趋向于零。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 1, Section 1.4, Book pp. 5–7 (PDF pp. 12–14); Eq. 1.10.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 1, Section 1.4 *Newton's law of gravitation*, Book pp. 5–7 (PDF pp. 12–14), Eq. 1.10；讲义出处：Week 1 Lecture.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 混淆了潮汐力（Tidal Force $\propto 1/r^3$）与单纯万有引力。  
 > - 选项 B 误把大气密度衰减（指数衰减）套到了万有引力上。  
@@ -730,7 +730,7 @@
 > > $\displaystyle \theta_{\text{lead}} = \omega_m \Delta t_1$  
 > 这个角度就叫月球超前角！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.2, Book p. 445 (PDF p. 452); Eq. 9.20.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 *Coplanar patched conic lunar trajectories*, Book p. 445 (PDF p. 452), Eq. 9.20；讲义出处：Week 5 Lecture 3 Slide 15.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 描述的是地心转移张角 $\Delta\theta$（Sweep Angle），两者完全不是一回事。  
 > - 选项 A 是航向角 $\gamma_0$。  
@@ -761,7 +761,7 @@
 > **【0基础白话直观图像】**:  
 > 调相机动的目标非常纯粹：飞船对当前轨道的形状、大小、倾角全都满意，唯独对飞船在轨道上的**时间/相位位置**不满意。因此在点火点 A 施加第一次冲量切入调相椭圆，绕飞一圈或数圈改变经历的总时间，然后再次回到点 A 施加完全等大反向的第二次冲量，重新回到初始轨道！这就是典型的“两次脉冲回原轨（Two impulses back to the same orbit）”。  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.3, Book p. 297 (PDF p. 304).  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.5 *Phasing maneuvers*, Book p. 298 (PDF p. 305)；讲义出处：Week 3 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 只完成了前半段，没回原轨就不是调相机动。  
 > - 选项 C 混淆了轨道面旋转（Plane change）。  
@@ -794,7 +794,7 @@
 > > $\displaystyle a_{\text{phase}} = \left[\mu \left(\frac{T_{\text{phase}}}{2\pi}\right)^2\right]^{1/3}$  
 > 这正是“从时间逆推空间半长轴（Start from period and derive axis）”！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.3, Book pp. 297–299 (PDF pp. 304–306); Week 3 Lecture 1.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.5 *Phasing maneuvers*, Book pp. 298–301 (PDF pp. 305–308)；讲义出处：Week 3 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A/C/D 都是常见的推导中间步骤烟雾弹，未能击中其“时间先于几何”的方法论核心。  
 > **【考场一秒题眼】**: 看到 `sizing phasing orbit runs backwards because` $\to$ 选 `Start from the period and derive the axis`。
@@ -825,7 +825,7 @@
 > > $\displaystyle \frac{r_{\text{SOI}}}{D} = \left(\frac{m}{M}\right)^{2/5}$  
 > 度量的是**整个航行旅途中，有多少比例是在目标天体的主导引力区内度过的**！月球的 $r_{\text{SOI}}/D \approx 66183 / 384400 \approx 17.2\%$，占整个地月距离的近六分之一；而行星际任务中该比例往往不到 1%。比值越大，两体拼接的边界过渡区就越宽厚，三体非惯性摄动对整体轨迹的影响就越不可忽视！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 8, Section 8.3 & Chapter 9, Section 9.2, Book p. 441 (PDF p. 448); Week 4 Lecture 2.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 8, Section 8.4 *Sphere of influence*, Book pp. 392–395 (PDF pp. 399–402), Eq. 8.24；讲义出处：Week 4 Lecture 2 Slide 18.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 陷入了对质公式变量的机械罗列。  
 > - 选项 C 属于无关动态变量。  
@@ -857,7 +857,7 @@
 > > $\displaystyle \varepsilon = \frac{1}{2}v^2 - \frac{\mu}{r} = -\frac{\mu}{2a}$  
 > 这个公式极其霸道：无论飞船在椭圆轨道上运行到近地点、远地点还是任意位置，无论椭圆偏心率 $e$ 是 0（正圆）还是 0.99（极扁），只要半长轴 $a$ 固定，比机械能 $\varepsilon$ 就严格恒定！它**仅仅取决于半长轴 $a$**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 2, Section 2.7, Book p. 89 (PDF p. 96); Eq. 2.80.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 2, Section 2.5 *The energy law*, Book p. 80 (PDF p. 87), Eq. 2.70；讲义出处：Week 1 Lecture.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 是极度高发的概念混淆项！偏心率 $e$ 决定的是角动量 $h = \sqrt{\mu a (1-e^2)}$，完全不影响总机械能 $\varepsilon$！  
 > - 选项 B 违背了能量守恒定律。  
@@ -889,7 +889,7 @@
 > > $\displaystyle \frac{\Delta v_{\text{total}}}{v_{c1}} = \left(\sqrt{\frac{2R}{1+R}} - 1\right) + \frac{1}{\sqrt{R}}\left(1 - \sqrt{\frac{2}{1+R}}\right), \quad R = \frac{r_2}{r_1}$  
 > 注意：引力常数 $\mu$ 在分子分母中被完全约掉了！这意味着只要两轨道的半径比值 $R$ 相同（例如外轨半径是内轨的 4 倍），无论是围绕地球从 LEO 到 GEO，还是围绕太阳从地球到火星，亦或围绕木星转移，所需要的无量纲速度比例都是完全一样的定值！它是一个天体之间通用的无量纲工程基准！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.2, Book p. 291 (PDF p. 298); Eq. 6.13.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.3 *Hohmann transfer*, Book pp. 290–292 (PDF pp. 297–299), Eq. 6.13；讲义出处：Week 2 Lecture 2.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 局限在地球上，忽略了物理方程的无量纲化普适性。  
 > - 选项 A 违背了公式对 $R$ 的直接函数依赖。  
@@ -922,7 +922,7 @@
 > 2. **月中（Monthly clock, 27.3d）**：月球在白道面上公转一周，决定奔月轨道的相位交会角；  
 > 3. **年际大钟（18.6-year node clock）**：月球轨道升交点以 18.6 年周期绕黄道进动，使得月球相对于地球赤道的倾角在 $18.3^\circ$ 到 $28.6^\circ$ 之间长周期慢速摆动，直接决定了每一年月球赤纬的最大跨度！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.3, Book pp. 450–454 (PDF pp. 457–461); Week 5 Lecture 5.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.3 *A simplified lunar ephemeris*, Book pp. 457–460 (PDF pp. 464–467)；讲义出处：Week 6 Lecture 5 Slide 8.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 混淆了短周期（月内赤纬变化）与长周期（年与年之间极值摆动幅度的变化）。  
 > - 选项 B 只负责每天发射面的几何对准。  
@@ -953,7 +953,7 @@
 > 辛普森拟合给出的月球位置和速度存在微小偏差 $\delta \mathbf{r}_m$。这并不是 1:1 地平移到近月点！  
 > 在月球影响球边界上，月心双曲线轨道的近月点高度由相对速度大小 $v_\infty$ 和飞越瞄准距 $b$ 决定：$r_p = \frac{\mu_m}{v_\infty^2} \left(\sqrt{1 + \frac{b^2 v_\infty^4}{\mu_m^2}} - 1\right)$。月球位置的微小偏移会改变双曲线渐近线的偏转角，具有极强的偏导数放大因子（Sensitivity Matrix $\partial r_p / \partial \mathbf{r}_m$）！误差最终放大多大，完全取决于**到达双曲线的几何灵敏度**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Week 5 Lecture 5 *The real Moon: ephemeris, 3D, integration, the patch's true error*.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.3 *A simplified lunar ephemeris*, Book pp. 457–459 (PDF pp. 464–466)；讲义出处：Week 6 Lecture 5 Slide 10–12.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 误以为误差是线性等幅传递的（以为月球位置差 10 km，近月点就刚好差 10 km）。  
 > - 选项 C 掩耳盗铃，计算的一致性不能消除经验拟合与真实引力场的偏差。  
@@ -989,7 +989,7 @@
 > > $\displaystyle \frac{\Delta m_1 + \Delta m_2}{m_0} = f_1 + f_2 \frac{m_1}{m_0} = f_1 + f_2 (1 - f_1) \neq f_1 + f_2$  
 > 直接相加严重高估了燃料消耗，是低级数学错误！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.1, Book p. 288 (PDF p. 295); Eq. 6.4.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.2 *Impulsive maneuvers*, Book p. 288 (PDF p. 295), Eq. 6.4；讲义出处：Week 2 Lecture 1.  
 > **【教授设坑套路剖析】**:  
 > - 选项 C 混淆了绝对推进剂质量（$\Delta m_1 + \Delta m_2$，可加）与无量纲百分比（分母不同，不可加）。  
 > - 选项 D 取平均值更是毫无物理根据的胡乱操作。  
@@ -1022,7 +1022,7 @@
 > 因此纯径向点火**绝对无法改变角动量 $h$**！  
 > 2. **能量与形状角度**：点火增加了径向速度分量 $v_r^+ = v_r^- + \Delta v_r$，使得总合速度标量 $v = \sqrt{v_r^2 + v_\theta^2}$ 增大，机械能 $\varepsilon = v^2/2 - \mu/r$ 增大，半长轴 $a = -\mu/(2\varepsilon)$ 变大，由 $h^2 = \mu a(1-e^2)$ 必然导致偏心率 $e$ 和拱线朝向发生变化！改变了形状，但绝不改变角动量！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.5, Book pp. 308–311 (PDF pp. 315–318); Week 2 Lecture 4.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.7 *Apse line rotation*, Book pp. 308–313 (PDF pp. 315–320)；讲义出处：Week 2 Lecture 4.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 彻底搞反了，角动量只受横向切向分量改变。  
 > - 选项 A/B 忽略了活力公式对速度大小的响应。  
@@ -1053,7 +1053,7 @@
 > 飞船在低地停泊轨道绕一圈大约需要 90 分钟。在这 90 分钟里，月球并不是木雕泥塑，它以约 $13.2^\circ/\text{天}$（约每 90 分钟走 $0.83^\circ$）的速度持续在白道面上逆时针向前公转！  
 > 飞船飞完 $360^\circ$ 回到原空间位置时，月球已经溜走了近 1 度！飞船必须在这个 90 分钟周期之外，再多花大约一两分钟时间往前追上这 $0.83^\circ$ 的新几何超前角，才能重新与月球构成精确的共面或交会点火几何。因此重复周期必定略大于停泊轨道自身周期！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.2, Book pp. 444–446 (PDF pp. 451–453); Week 5 Lecture 3.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 *Coplanar patched conic lunar trajectories*, Book pp. 444–446 (PDF pp. 451–453)；讲义出处：Week 5 Lecture 3 Slide 11.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 解释的是发射场每天的窗口，而题干问的是在太空停泊轨道上的出发点火时机（与地面发射场无关）。  
 > - 选项 B 阻力衰减只会使轨道变低、周期变短，因果全反。  
@@ -1087,7 +1087,7 @@
 > 1. **分母判别式防线（$h_1 \to \infty$）**：分母等于零时，$h_1$ 发散到无穷。几何上意味着在给定的张角 $\Delta\theta$ 和航向角 $\gamma_0$ 下，**没有任何一条物理轨道在几何上能够连接起点 $r_0$ 和月球影响球边界 $r_1$**！  
 > 2. **偏心率防线（$e = 1$）**：此时轨道恰好越过闭合椭圆，变为抛物线逃逸。它在几何上**完全能够飞抵 $r_1$**，只不过轨道不再闭合，无法形成周期束缚！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.2, Book p. 444 (PDF p. 451); Week 5 Lecture 3 Slides 13–14.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 *Coplanar patched conic lunar trajectories*, Book p. 444 (PDF p. 451), Eq. 9.18；讲义出处：Week 5 Lecture 3 Slide 13–14.  
 > **【教授设坑套路剖析】**:  
 > - 选项 C 荒谬，无穷大角动量绝不等于 $e=1$（抛物线角动量 $h = \sqrt{2\mu r_p}$ 是完全有限的实数）。  
 > - 选项 B 局限在霍曼特殊情况。  
@@ -1118,7 +1118,7 @@
 > 牛顿二体开普勒定律（拱线固定不动）**只在非旋转的牛顿惯性坐标系（Inertial Frame）中才严格成立**！  
 > 随月球转动的坐标系以月球公转角速度 $\omega_m$ 持续旋转，它是一个含有离心力与科里奥利力（Coriolis Force）的**非惯性坐标系**。在旋转系中，真实的双曲线轨迹会发生弯折和进动。工程计算之所以在拼接锥线中强行把月心双曲线拱线当成固定的二体曲线，完全是为了获取解析解而做出的**动力学简化近似（Approximation）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.2 & Chapter 10, Section 10.2; Week 5 Lecture 4.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 & Chapter 10, Section 10.2；讲义出处：Week 5 Lecture 4 Slide 28.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 忽视了“坐标系惯性”的绝对前提，非惯性系下质点连受力都要补上虚拟惯性力。  
 > - 选项 C 把物理动力学的实质简化粉饰成了无痛的几何平移。  
@@ -1150,7 +1150,7 @@
 > - 如果变面角 $\theta$ 很小（例如 $5^\circ$），直接在低轨变面代价很小，不值得大费周章绕远路；  
 > - 只有当变面角 $\theta$ 超过某个**临界平衡角（Break-even angle，通常在 $40^\circ \sim 60^\circ$ 以上）**时，在高远地点省下的巨额变面燃料才能彻底覆盖两次升降轨的门票开销！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.7 *Bi-elliptic transfer with plane change*, Book pp. 319–322 (PDF pp. 326–329).  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.4 *Bielliptic Hohmann transfer* & Section 6.9 *Plane change maneuvers*, Book pp. 295–298, 319–322 (PDF pp. 302–305, 326–329)；讲义出处：Week 3 Lecture 2.  
 > **【教授设坑套路剖析】**:  
 > - 选项 C 忽视了两次抬轨降轨的固有代价。  
 > - 选项 D 彻底把临界角的判定方向搞反了（大角度才划算，而不是小角度）。  
@@ -1182,7 +1182,7 @@
 > 月球公转速度 $\omega_m$ 是大自然给定的常数。如果飞船飞得更快，奔月滑行时间 $\Delta t_1$ 就从经典的 5 天（霍曼转移）缩短到了 3.2 天甚至 2 天。  
 > 既然飞船花的时间少，月球在飞船飞行期间往前跑的距离当然就少，因此瞄准射击时所需要的“提前量”（超前角）必然**更小（Smaller）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.2, Book p. 445 (PDF p. 452); Eq. 9.20.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 *Coplanar patched conic lunar trajectories*, Book p. 445 (PDF p. 452), Eq. 9.20；讲义出处：Week 5 Lecture 3 Slide 15.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 是倒因为果的胡乱推理。  
 > - 选项 C/D 忽视了超前角与飞行时间 $\Delta t_1$ 的直接正比依赖。  
@@ -1214,7 +1214,7 @@
 > > $\displaystyle v_c = \sqrt{\frac{\mu_m}{r}}$  
 > 只要轨道半径 $r$ 确定，速度大小只由中心天体的引力常数 $\mu_m = G M_m$ 决定！飞船重 100 吨还是 10 千克、剩余多少燃料、倾角是赤道轨还是极轨，圆速度分毫不差完全一致！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 2, Section 2.4, Book p. 74 (PDF p. 81); Eq. 2.33.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 2, Section 2.4 *Angular momentum and the orbit formulas*, Book p. 74 (PDF p. 81), Eq. 2.33；讲义出处：Week 1 Lecture.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 是日常牛顿第二定律直觉误区，引力质量与惯性质量等效导致飞船质量完全被约掉。  
 > - 选项 D 倾角只决定平面法向，不改变速度大小标量。  
@@ -1246,7 +1246,7 @@
 > > $\displaystyle \Delta v = 2 v \sin\left(\frac{\theta}{2}\right)$  
 > 该公式表明：变面代价与当前瞬时速度 $v$ 严格成正比！想要用最少的速度增量把速度向量“掰弯”相同的角度 $\theta$，就必须挑飞船飞得最慢的地方点火！在椭圆轨道上，速度最慢的极值点永远是**远拱点（Apoapsis）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.6, Book pp. 314–318 (PDF pp. 321–325); Week 3 Lecture 2.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.9 *Plane change maneuvers*, Book pp. 317–319 (PDF pp. 324–326), Eq. 6.26；讲义出处：Week 3 Lecture 2.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 是典型的奥伯特效应误套。加速抬轨才需要在最快的近拱点（使能量 $\Delta\varepsilon = v \Delta v$ 最大），而变面是无用旋转功，必须在最慢的远拱点做！  
 > - 选项 B 忽视了如果升交点恰在近地点，强行在升交点变面会烧掉巨额燃料。  
@@ -1278,7 +1278,7 @@
 > > $\displaystyle h = b v_\infty = 0$  
 > 角动量为零的二体轨道退化为一条**径向直线（Rectilinear Orbit）**！在其纯数学方程中，近月点半径退化为原点：$r_p = 0$。但在物理现实中，月球并不是一个无体积的数学几何点，它拥有坚硬的球体岩石表面（月球平均半径 $R_m \approx 1737\text{ km}$）。既然近月点在球心（0 km），飞船在到达 1737 km 时就会以几千米每秒的高速粉身碎骨地砸向月表！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 8, Section 8.4 *Hyperbolic flyby*, Book pp. 411–415 (PDF pp. 418–422); Week 5 Lecture 4.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 8, Section 8.9 *Planetary flyby*, Book pp. 413–416 (PDF pp. 420–423)；Chapter 9, Section 9.2, Book p. 445 (PDF p. 452)；讲义出处：Week 5 Lecture 4.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 误以为大自然会仁慈地让飞船在月面擦边，没有角动量支撑它根本绕不过去。  
 > - 选项 B 误套了弹性刚体碰撞模型。  
@@ -1314,7 +1314,7 @@
 > 2. **东南向发射（Southeast pass, $180^\circ - A_0 > 90^\circ$）**：火箭向东南飞，飞船入轨后处于下降段（从北向南穿过赤道，降交点入轨）。  
 > 这就是正弦函数的数学必然性！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.8 *Launch windows*, Book pp. 323–326 (PDF pp. 330–333); Eq. 6.32.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.9 *Plane change maneuvers* (Launch azimuth), Book pp. 323–326 (PDF pp. 330–333), Eq. 6.32；讲义出处：Week 3 Lecture 3.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D 混淆了顺行与逆行，同一个 $i$（例如 $i=51.6^\circ$）是确定的倾角，两解都是顺行，只是升降轨方向不同。  
 > - 选项 A 地球自转会引起速度三角形修正，但不是解析公式出现双根的原因。  
@@ -1346,7 +1346,7 @@
 > > $\displaystyle \varepsilon_2 = \frac{1}{2}v_2^2 - \frac{\mu_m}{r_2} = \frac{1}{2}v_\infty^2 = \text{常数}$  
 > 当飞船飞到无穷远处（或影响球边界）时，引力势能衰减为零，因此飞出月球影响球时的相对速率标量 $v_{\infty,\text{out}}$ 必定与飞入时的 $v_{\infty,\text{in}}$ 完全相等（$v_{\infty,\text{out}} = v_{\infty,\text{in}}$）！月球二体引力所做的一切，仅仅是像引力弹弓一样，把速度向量生生掰弯了一个偏转角 $\delta$！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 8, Section 8.4, Book pp. 411–413 (PDF pp. 418–420); Week 4 Lecture 3 & Week 5 Lecture 4.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 8, Section 8.9 *Planetary flyby*, Book pp. 413–415 (PDF pp. 420–422)；讲义出处：Week 4 Lecture 3 & Week 5 Lecture 4.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 是典型的“日心坐标系重力助推”误区！在地心系中飞船速度确实可以借月球公转加速或减速，但题干极其明确限定了**“相对于月球（Relative to the Moon）”**，在月心参考系中绝不可能凭空创造能量！  
 > - 选项 C 违背能量守恒，二体无动力双曲线永远是逃逸轨道，绝不可能自发捕获。  
@@ -1376,7 +1376,7 @@
 > **【0基础白话直观图像】**:  
 > 太空中没有一堵由玻璃打造的“物理影响球面”！引力场是连续平滑充满全空间的。二体拼接锥线法（Patched Conic）虽然在数学形式上于 $R_S = 66,183\text{ km}$ 处强行把“地心方程”切换为“月心方程”，但在真实的三体物理世界中，地球引力和月球引力一直在同时撕扯着飞船。这种近似带来的误差并不是在进入 $R_S$ 那一微秒突然崩塌，而是在长达数十万公里的**宽广过渡区域（Broad transition region）内平滑扩散并持续积分放大的**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9, Section 9.4, Book pp. 455–460 (PDF pp. 462–467); Week 5 Lecture 5 Slides 24–25.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.5 *Lunar trajectories by numerical integration*, Book pp. 469–476 (PDF pp. 476–483)；讲义出处：Week 6 Lecture 5 Slide 24–25.  
 > **【教授设坑套路剖析】**:  
 > - 选项 B 是死记硬背拼接概念的学生的头号陷阱（误以为模型怎么切，物理误差就怎么跳）。  
 > - 选项 C 严重低估了三体摄动的空间作用范围。  
@@ -1410,7 +1410,7 @@
 > - $\gamma_0$：爬升陡峭度，携带全任务最大的控制风险；  
 > - $\lambda$：到达影响球的方位角，仅以几何投影贡献一小部分 $\Delta\theta$。  
 > **【教材与讲义精确出处】**:  
-> 📖 Week 5 Lecture 3 Slide 14 *What each dial does*; Curtis Chapter 9, Section 9.2.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 9, Section 9.2 *Coplanar patched conic lunar trajectories*, Book pp. 440–445 (PDF pp. 447–452)；讲义出处：Week 5 Lecture 3 Slide 14.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A $\lambda$ 位于月球端，它通过三角关系几何投影影响张角，但绝非 1:1 线性联动（Slide 14: $\lambda$ worth 9.9 degrees of $\Delta\theta$）。  
 > - 选项 C/D 不直接主导起点空间角位置。  
@@ -1441,7 +1441,7 @@
 > NRHO（Near Rectilinear Halo Orbit）是人类航天动力学工程的绝妙杰作！NASA 之所以给月球空间站（Gateway）选定 9:2 偏心晕轨道，其核心生命线是**避免任何地球或月球造成的日食（Zero Eclipses）**！  
 > 太阳光照方向是由地月系统绕太阳公转的**会合月（Synodic Month，朔望月，约 29.53 天）**主导的。让 9 个 NRHO 轨道周期（$9 \times 6.56\text{ 天} \approx 59.0\text{ 天}$）精确等于**两个会合月（Two synodic months $\approx 59.06\text{ 天}$）**，空间站就能永远与太阳保持特定的空间构型，永远沐浴在阳光下持续进行太阳能发电，并且永远无须经历长达几小时的冻结黑暗！  
 > **【教材与讲义精确出处】**:  
-> 📖 Week 6 Lecture 6 *Staying and landing: sensing, relay and descent at the south pole*, Slide 34–38.  
+> 📖 AERO3760 讲义官方出处：Week 6 Lecture 6 *Staying and landing: sensing, relay and descent at the south pole*, Slides 34–38 (NRHO 9:2 resonance with two synodic months).  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 偷换概念成了恒星月（恒星月是相对于遥远恒星背景的 27.3 天，无法锁定太阳光线方位）。  
 > - 选项 C/D 周期量级完全脱轨。  
@@ -1473,7 +1473,7 @@
 > > $\displaystyle \delta r = \left|\frac{\partial r}{\partial (\Delta v)}\right| \cdot \delta(\Delta v)$  
 > 那么如果任务允许的脱靶容差是 $\delta r \le 10\text{ km}$，代入灵敏度后，立刻就能严格反解出发动机点火关机阀门、姿态指向误差和推力截断精度所允许的最大速度误差极限 $\delta(\Delta v) \le 0.05\text{ m/s}$！这就把一个虚拟的数学残差，实打实地变成了**硬件推进与控制系统（Propulsion & GNC System）必须严格满足的研制技术指标（Requirement）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 9 & 10; Week 5 Lecture 5 *Flight design, navigation and manoeuvre models*.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 8, Section 8.7 *Sensitivity analysis*, Book pp. 410–412 (PDF pp. 417–419)；讲义出处：Week 6 Lecture 5 Slide 32.  
 > **【教授设坑套路剖析】**:  
 > - 选项 C 是考试调侃项。  
 > - 选项 D 答非所问，灵敏度是微分映射，不是推进剂余量。  
@@ -1509,7 +1509,7 @@
 > - 同时分子中的 $v_\infty$（相对来流速度）必须尽可能小——**速度极慢（Slow）**！  
 > 引力作用时间越长、离引力中心越近，引力弯折效果最强悍！即 **“Slow and close bend hardest”**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 8, Section 8.4, Book pp. 411–414 (PDF pp. 418–421); Eq. 8.41 & 8.44.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 8, Section 8.9 *Planetary flyby*, Book pp. 414–416 (PDF pp. 421–423), Eq. 8.41 & 8.44；讲义出处：Week 5 Lecture 4 Slide 18.  
 > **【教授设坑套路剖析】**:  
 > - 选项 C 彻底反向，速度极快（如光子）或距离极远只会笔直飞过，几乎没有任何弯折（$e \to \infty, \delta \to 0$）。  
 > - 选项 B/D 各执一词，片面割裂了乘积项的协同作用。  
@@ -1542,7 +1542,7 @@
 > - **抠微观参数（Micro-polishing）**：在远地点是用单次点火还是按 52:48 分成两次点火，经过几千次非线性规划迭代，可能只能省下 0.5% 的推进剂。  
 > 航天工程师的第一要务，是凭借清晰的物理图像**“先抓对系统结构（Get the structure right）”**，千万不要把时间浪费在在错误的结构架构上去死磕数值优化！  
 > **【教材与讲义精确出处】**:  
-> 📖 Week 2 & Week 3 Lecture Synthesis; Curtis Chapter 6, Section 6.6 & 6.7.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.9 *Plane change maneuvers*, Book pp. 317–323 (PDF pp. 324–330)；讲义出处：Week 3 Lecture 2 Synthesis.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 走极端，连续优化在最后精算阶段至关重要，只是次序在结构之后。  
 > - 选项 D 纯属指鹿为马，近地点是最昂贵的变面灾难区。  
@@ -1572,7 +1572,7 @@
 > **【0基础白话直观图像】**:  
 > 在理想极轨（$i = 90^\circ$）中，轨道平面在空间中相对于遥远恒星背景是保持不动的。轨道下方要想把月球表面从东经 $0^\circ$ 到 $360^\circ$ 的所有经线全部“扫”一遍，唯一的驱动力就是**月球自身的自转**！月球自转一整圈需要 27.3 天（一个恒星月）。不管你把卫星轨道降到 100 km 还是 30 km，轨道变低只会让每圈绕行时间变短、地面条带更密、图像更清晰，但要把月球全球 360 度的所有经线完整展现给相机，**必须雷打不动地等待月球自己转满一整圈（27.3 天）**！  
 > **【教材与讲义精确出处】**:  
-> 📖 Week 6 Lecture 6 *Sensing, relay and descent*, Slide 10–14; Curtis Chapter 4.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 4, Section 4.5 *Ground tracks*, Book pp. 200–208 (PDF pp. 207–215)；讲义出处：Week 6 Lecture 6 Slide 10–14.  
 > **【教授设坑套路剖析】**:  
 > - 选项 D/A 误将轨道公转周期与天体自转周期混为一谈。  
 > - 选项 B 混淆了有效条带重叠度与全经度穿透时间。  
@@ -1606,7 +1606,7 @@
 > > $\displaystyle \Delta v = \sqrt{(v_1 - v_2)^2 + v_1 v_2 \theta^2} \approx |v_1 - v_2| + \frac{v_1 v_2}{2 |v_1 - v_2|} \theta^2$  
 > 注意看：超出单纯速度改变量 $|v_1 - v_2|$ 的额外增量，是**与变面角 $\theta$ 的平方（$\theta^2$，二阶微扰）成正比的**！在数学上，当 $\theta \to 0$ 时，$\theta^2$ 的导数在零点为零！这意味着：**附带转动前几度（例如 $2^\circ \sim 3^\circ$）的燃耗增量近乎为零（Almost Free）**！航天工程师永远要将变面搭便车合入升降轨点火中！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.6, Book pp. 315–318 (PDF pp. 322–325); Eq. 6.30; Week 3 Lecture 2.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.9 *Plane change maneuvers*, Book pp. 318–320 (PDF pp. 325–327), Eq. 6.30；讲义出处：Week 3 Lecture 2.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 是独立变面（$\Delta v = 2 v \sin(\theta/2) \approx v \theta$，纯一阶）的直觉误导。复合点火由于三角形斜边效应，变面投影被纯加速主矢量吸收，从而压低到了二阶！  
 > **【考场一秒题眼】**: 看到 `adding small plane rotation to speed burn extra cost enters` $\to$ 选 `at second order in the angle, so the first degrees cost little`。
@@ -1636,7 +1636,7 @@
 > 埃德尔鲍姆（Edelbaum）闭式螺旋公式 $\Delta v \approx |v_{c1} - v_{c2}|$ 的立论基石：推力加速度极微弱（几个毫牛），飞船需要喷射数月、绕地球转上千圈。由于每一圈的轨道提升量只有几百米，轨道像蚊香一样致密，**在每一圈的每一个瞬时，轨道几乎都是完美正圆，速度严丝合缝地等于局部圆速度 $v \approx v_c$**！  
 > 而化学火箭推力极其暴烈，几百秒内就能提供几公里每秒的速度，一瞬间就会把轨道炸成一个高偏心率的大椭圆，速度与局部圆速度天差地别，使得“处处速度等于圆速度”的前提彻底崩溃！  
 > **【教材与讲义精确出处】**:  
-> 📖 Curtis Chapter 6, Section 6.9 *Continuous low-thrust transfers*, Book pp. 329–331 (PDF pp. 336–338); Eq. 6.39.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 6, Section 6.10 *Nonimpulsive orbital maneuvers*, Book pp. 329–335 (PDF pp. 336–342), Eq. 6.39；讲义出处：Week 3 Lecture 4.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A/C 扯推进剂物理化学属性，纯属障眼法。  
 > - 选项 B 倒因为果，离子发动机可以在任意偏心轨道工作，是其加速度微弱导致轨道保持准正圆。  
@@ -1667,7 +1667,7 @@
 > 在常规二体拼接锥线中，第三体（太阳/地球）的潮汐摄动被当成一种让人头疼的“边界模糊误差”，因为快速穿过时我们只看到了轨道位置偏了几十公里。  
 > 但在日本 Hiten 飞船和 NASA GRAIL 探测器开创的**弹道捕获（Ballistic Capture）**轨道中，工程师利用低能量流形（Low Energy Manifolds），让飞船在月球拉格朗日点 L1/L2 外围的弱稳定性边界处**逗留徘徊数月之久**！在如此漫长的时间跨度下，太阳与地球引力形成的引力力矩持续对飞船做功，竟然硬生生地把飞船相对于月球的双曲线超额能量抽干，使其自然转变为相对月球的比能量负值（$\varepsilon_2 < 0$），实现了**零推进剂自动落入月球束缚轨道（Capture）**！时间让微小的扰动积累成了根本性的轨道能量改变！  
 > **【教材与讲义精确出处】**:  
-> 📖 Week 6 Lecture 5 & Lecture 6 *Low-energy lunar transfers, weak stability boundary and ballistic capture*; Curtis Chapter 10.  
+> 📖 Howard D. Curtis, *Orbital Mechanics for Engineering Students* (4th Edition): Chapter 10, Section 10.5 *Gravitational perturbations*, Book pp. 487–494 (PDF pp. 494–501)；讲义出处：Week 6 Lecture 5 & Lecture 6 *Weak stability boundary and ballistic capture*.  
 > **【教授设坑套路剖析】**:  
 > - 选项 A 彻底颠倒事实，拼接锥线根本无法处理弹道捕获，弹道捕获必须全过程依赖受限三体动力学数值积分。  
 > - 选项 B 力的本质完全相同，差异纯在作用时间尺度上。  
