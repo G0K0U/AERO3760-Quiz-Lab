@@ -149,6 +149,17 @@
 
 ---
 
+
+#### 1.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q03, Q05; Weekend Set B Q03, Q07; 仿真考题 1, 2
+- **核心考法拆解**：
+  1. **冲量理想化假定的物理几何本质**：速度瞬变（$\Delta \mathbf{v} \neq 0$），位置严格不变（$\Delta \mathbf{r} = 0$）。
+  2. **模型适用性的首要无量纲判据**：点火持续时间远小于轨道周期（$\Delta t_{burn} / T_{orbit} \ll 1$，通常 $< 1\%$），扫过的真近点角极小。
+  3. **违背假定的工程后果**：点火时间过长会导致“重力损失（Gravity Loss）”与“推力方向与速度失配”，必须弃用高斯/两体模型，转入有限推力数值积分。
+- **教授干扰项特征**：选项常诱导选“发动机是化学还是电推进”（物理实现非力学标准）、“$\Delta v$ 小于 1 km/s”（数值绝对大小与冲量假定无关）、“飞船质量保持恒定”（火箭喷气质量剧烈减小）。
+- **1 秒秒杀口诀**：**冲量假定看两点：位置不动速度瞬变，点火时间远小于周期！**
+
+
 ### 2. 齐奥尔科夫斯基火箭方程与比冲本质 (Tsiolkovsky Rocket Equation & Isp)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 13, Section 13.2 *The thrust equation* & Section 13.3 *Rocket performance*, **Book pp. 708–712 (PDF pp. 715–719)**, Equations 13.10–13.18
 
@@ -175,6 +186,16 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 - ⚠️ **高比冲 $\neq$ 大推力**：化学火箭比冲低（$300 \sim 450\text{ s}$），但推力巨大（几百吨），能从地面垂直砸向天空；离子电推进比冲极高（$3000\text{ s}$），但推力只有几十毫牛（相当于一张纸放在手心的重量），无法用于起飞。
 
 ---
+
+
+#### 2.4 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q04, Q16; Weekend Set B Q15, Q16; 仿真考题 3
+- **核心考法拆解**：
+  1. **比冲中的 $g_0$ 是法正常数**：$g_0 \equiv 9.80665\text{ m/s}^2$ 是人为单位换算常数，绝非当地重力！在月球、火星或深空零重力下，同一发动机的标称比冲严格保持 300 秒不变。
+  2. **工质认绝对增量，轨道看相对比值**：推进剂消耗量严格由绝对速度增量 $\Delta v$ 和 $I_{sp}$ 决定（指数暴政）；但该点火对轨道几何的震撼改变程度，取决于 $\Delta v / v_c$ 相对局域环绕速度的比值。
+- **教授干扰项特征**：选项极度喜欢诱导“在月球表面重力为 1/6 地球，比冲变成 50 秒或 1800 秒”。记住：$I_{sp} = c / g_0$，排气速度 $c$ 不变，$g_0$ 不变，比冲纹丝不动！
+- **1 秒秒杀口诀**：**比冲常数天地不变，推进剂烧绝对 $\Delta v$，轨道剧变看相对比值！**
+
 
 ### 3. 霍曼双脉冲转移与为什么第二点火不能省 (Hohmann Transfer)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.3 *Hohmann transfer*, **Book pp. 289–295 (PDF pp. 296–302)**, Equation 6.13, Example 6.1
@@ -220,6 +241,17 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 
 # 模块二：Week 2 & 3 替代转移、调相与矢量机动 (Advanced Manoeuvres)
 
+
+#### 3.4 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q02, Q11, Q20, Q25; Weekend Set B Q04, Q11, Q20, Q25; 仿真考题 4
+- **核心考法拆解**：
+  1. **两次点火的悬殊比例**：飞往月球距离，近地点加速 $\Delta v_1 \approx 3.14\text{ km/s}$ 远大于远地点入轨 $\Delta v_2 \approx 0.83\text{ km/s}$（大数倍之多）。
+  2. **无动力滑行能量守恒**：从近地点滑行到远地点，飞船减速的动能 100% 转化为克服地球引力做功的引力势能。
+  3. **无量纲基准通用性**：总速度增量与内轨速度之比 $\Delta v_{total} / v_{c1}$ 仅取决于半径比 $r_2 / r_1$，消去了天体质量 $\mu$，是跨所有天体通用的经典 benchmark。
+- **教授干扰项特征**：常说“两端点火几乎相等”或“动能被第一次点火带走/被阻力消耗”。
+- **1 秒秒杀口诀**：**霍曼转移近地点点火大得多，滑行减速动能全换势能，半径比决定无量纲基准！**
+
+
 ### 4. 双椭圆转移与三大临界阈值 (Bi-elliptic Transfer Thresholds)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.4 *Bielliptic Hohmann transfer*, **Book pp. 295–298 (PDF pp. 302–305)**, Equations 6.16–6.18, Figure 6.7, Example 6.2
 
@@ -238,6 +270,19 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 - ⚠️ **工程代价**：虽然省了一点点燃料，但飞船飞到几百万公里外的 $r_b$ 再滑回来，飞行时间往往长达数月甚至数年。
 
 ---
+
+
+#### 4.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q33; Weekend Set B Q33; 仿真考题 5
+- **核心考法拆解**：
+  1. **三大临界阈值牢记心中**：
+     - $R = r_2 / r_1 < 11.94$：霍曼双脉冲绝对最优，双椭圆绕道永远亏本。
+     - $11.94 < R < 15.58$：双椭圆取决于中间远地点高度 $r_i$，当 $r_i > r_i^*$ 足够高时胜出。
+     - $R > 15.58$：只要中间远地点放到无穷大（Biparabolic），总速度增量无条件小于霍曼！
+  2. **结合变面的平衡角（Break-even Angle）**：将变轨面放在双椭圆中间远地点，仅在倾角改变大于临界平衡角（通常 $> 40^\circ \sim 60^\circ$）时才划算。
+- **教授干扰项特征**：常声称“双椭圆在任何角度或任何半径比下都优于霍曼”。
+- **1 秒秒杀口诀**：**11.94 霍曼称王，15.58 无穷反超，大角度变面双椭圆才划算！**
+
 
 ### 5. 同轨调相：反常识的“减速超车” (Orbital Phasing)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.5 *Phasing maneuvers*, **Book pp. 298–308 (PDF pp. 305–315)**, Equations 6.19–6.25, Example 6.3 & 6.4
@@ -259,6 +304,17 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
   $$a_{\text{phase}} = \left[\mu \left(\frac{T_{\text{phase}}}{2\pi}\right)^2\right]^{1/3}$$
 
 ---
+
+
+#### 5.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q10, Q19, Q26; Weekend Set B Q10, Q19, Q26; 仿真考题 6
+- **核心考法拆解**：
+  1. **落后追赶反向操作**：落后目标必须减速降轨，压缩周期 $T < T_0$ 走内圈超车。
+  2. **逆向尺寸设计流程**：先由相位差定目标周期 $T_{phase}$，再由周期根据开普勒第三定律反推半长轴 $a$（Runs backwards）。
+  3. **单圈调相撞地死穴**：低轨若试图在单圈内抹平大落后角度（如落后 40°），算出的椭圆近地点直接跌破地球表面（Drop below surface），必须拆为多圈小幅追赶。
+- **教授干扰项特征**：常诱导“踩油门加速追赶”或“单圈调相完美满足方程所以完全安全”。
+- **1 秒秒杀口诀**：**超车先减速走内圈，周期反推半长轴，低轨大角度单圈必撞地！**
+
 
 ### 6. 离拱点非霍曼与矢量速度改变 (Off-Apsis Transfers & Vector Delta-v)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.6 *Non-Hohmann transfers with a common apse line* (Book pp. 303–308, PDF pp. 310–315) & Section 6.7 *Apse line rotation* (Book pp. 308–313, PDF pp. 315–320), Example 6.7 & 6.8
@@ -283,6 +339,16 @@ $$\frac{m_0}{m_f} = \exp\left(\frac{\Delta v}{I_{sp} g_0}\right)$$
 ---
 
 # 模块三：Week 3 L4 平面改变与低推力 (Plane Changes & Low Thrust)
+
+
+#### 6.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q12, Q30; Weekend Set B Q12, Q30; 仿真考题 7
+- **核心考法拆解**：
+  1. **纯径向点火效应**：$\Delta \mathbf{v} \parallel \mathbf{r} \implies \mathbf{r} \times \Delta \mathbf{v} = 0$，**比角动量 $h$ 严格不变**！但总能量改变，半长轴 $a$、偏心率 $e$ 剧变，且拱线发生强烈旋转。
+  2. **近地点纯横向点火**：保持轨道对称性，**拱线空间取向完全不动**（Leaves apse line unmoved），只对称地推高或降低远地点。
+- **教授干扰项特征**：常声称“径向点火改变角动量”或“近地点切向点火旋转拱线”。
+- **1 秒秒杀口诀**：**径向点火角动量不变但改形状转拱线，近地切向点火拱线纹丝不动！**
+
 
 ### 7. 轨道平面改变：太空中最昂贵的抢劫 (Plane Changes)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.9 *Plane change maneuvers*, **Book pp. 317–328 (PDF pp. 324–335)**, Equations 6.26, 6.30, 6.32, Example 6.9 & 6.10
@@ -310,6 +376,17 @@ $$\Delta v = 2 v \sin\left(\frac{\delta}{2}\right)$$
 
 ---
 
+
+#### 7.4 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q35, Q47, Q49; Weekend Set B Q35, Q47, Q49; 仿真考题 8
+- **核心考法拆解**：
+  1. **远心点最便宜定律**：$\Delta v = 2v\sin(\Delta i / 2)$ 与线速度成正比，远心点速度最低，最省燃料。
+  2. **结合机动的二阶泰勒小量免费赠送**：在切向大加减速中顺带变面，余弦展开 $\cos\Delta i \approx 1 - \frac{1}{2}\Delta i^2$，额外代价以**二阶小量（Second order）**进入，最初几度近乎免费！
+  3. **架构优先哲学**：选在远地点还是近地点变轨是决定生死的结构性架构决策（差异数倍）；在两次点火间微调倾角分配收益极小。
+- **教授干扰项特征**：常将奥伯特近地点法则死板搬到变轨面上，或宣称结合机动额外代价是线性的。
+- **1 秒秒杀口诀**：**变面认准远心点，结合机动二阶小量近免费，顶层架构定生死！**
+
+
 ### 8. 发射方位角与纬度极限 (Launch Azimuth & Inclination Limit)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.9 *Plane change maneuvers*, **Book pp. 326–328 (PDF pp. 333–335)**, Equation 6.38b, Example 6.11
 
@@ -328,6 +405,16 @@ $$\cos i = \cos \phi \sin A_0$$
 
 ---
 
+
+#### 8.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q41, Q43; Weekend Set B Q41, Q43; 仿真考题 9
+- **核心考法拆解**：
+  1. **互补双根共享正弦**：球面公式 $\cos i = \cos\phi \sin\beta$ 解出 $\sin\beta = \cos i / \cos\phi$。由于 $\sin\beta = \sin(180^\circ - \beta)$，同一发射场入同一倾角必有东北与东南两个互补发射角。
+  2. **几何铁律 vs 管制法规**：发射场纬度是决定最低倾角（$i \ge |\phi|$）的不可改变几何铁律；方位角走廊是出于残骸落区安全的人为人为条例，可审批豁免。
+- **教授干扰项特征**：将双根归咎于“顺行逆行”或“地球南北半球等价”。
+- **1 秒秒杀口诀**：**方位角互补共享正弦，纬度是几何铁律，方位角范围是安全法规！**
+
+
 ### 9. 低推力电推进连续螺旋 (Continuous Low-Thrust Spiral)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 6, Section 6.10 *Nonimpulsive orbital maneuvers*, **Book pp. 329–335 (PDF pp. 336–342)**, Equation 6.39, Example 6.12
 
@@ -340,6 +427,16 @@ $$\cos i = \cos \phi \sin A_0$$
 ---
 
 # 模块四：Week 4 地月转移初阶与影响球模型 (Earth–Moon Transfers & SOI)
+
+
+#### 9.2 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q50; Weekend Set B Q50; 仿真考题 10
+- **核心考法拆解**：
+  1. **闭式公式假定条件**：Curtis Eq. 6.39 给出 $\Delta v \approx |v_{c1} - v_{c2}|$。它要求航天器在每一处向径的速度都严格等于当地圆轨道速度。
+  2. **电推与化学火箭的分水岭**：离子电推加速度极小，万圈外展螺旋始终保持准圆（Nearly circular），公式公允精确；化学火箭推力巨大瞬间变成大椭圆，公式完全失真。
+- **教授干扰项特征**：常将公式适用性归咎于“推进剂密度”或“氙气专用”。
+- **1 秒秒杀口诀**：**电推进准圆蚊香线速度差闭式解，化学火箭大椭圆严禁套用！**
+
 
 ### 10. 地月霍曼估计与黄金 110 m/s 速度敏感度 (Lunar Hohmann & v0 Sensitivity)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.1 & 9.2, **Book pp. 437–442 (PDF pp. 444–449)**, Equations 9.1–9.9
@@ -361,6 +458,20 @@ $$\cos i = \cos \phi \sin A_0$$
 
 ---
 
+
+#### 10.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q01, Q08, Q09, Q13, Q18; Weekend Set B Q01, Q08, Q09, Q13, Q18; 仿真考题 11
+- **核心考法拆解**：
+  1. **注入速度天梯四大层级**：
+     - 低于霍曼：远地点到不了月球。
+     - 霍曼行：远地点恰好切中月球轨道。
+     - 逃逸行：比机械能跨过零点（$\varepsilon = 0$），抛物线，其上不再有有限远地点！
+     - 束缚椭圆（Bound orbit）：特征能量 $C_3 < 0$ 恒为负，若错过月球必定自动落回近地点；双曲线（$\varepsilon > 0$）一去不返。
+  2. **敏感度爆炸放大**：近地点少喷不到 $1\text{ m/s}$，远地点跌落**数千公里**（$\sim 1100\text{ km}/(\text{m/s})$）；近地点速度提升千分之几，远地点暴增过半（More than half again）！
+- **教授干扰项特征**：线性比例假设（以为误差几米每秒只会差几公里）。
+- **1 秒秒杀口诀**：**逃逸行机械能归零无远地点，1 m/s 差千公里，束缚必回近地点！**
+
+
 ### 11. 拉普拉斯影响球模型：引力并不平衡的建模边界 (Laplace SOI)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 8, Section 8.4 *Sphere of influence*, **Book pp. 392–396 (PDF pp. 399–403)**, Equation 8.24; Chapter 9, Section 9.2, **Book p. 440 (PDF p. 447)**
 
@@ -381,6 +492,17 @@ $$R_S = D \left(\frac{m_{\text{moon}}}{m_{\text{earth}}}\right)^{2/5} = 384,400 
 
 # 模块五：Week 5 月心双曲线、近月点与自由返回 (Arrival & Flybys)
 
+
+#### 11.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q17, Q27; Weekend Set B Q17, Q27; 仿真考题 12
+- **核心考法拆解**：
+  1. **空间与时间严重脱钩**：月球影响球半径占地月总距离仅 $17\%$，但由于飞船在远端速度慢如蜗牛（爬出深井动能耗尽），飞船在影响球内部耗费时间占总航程超 $35\%$！
+  2. **无量纲交接排名**：交接质量以 $r_{SOI} / D = (m/M)^{2/5}$ 排名，衡量过渡模糊区占整条旅程的几何份额。
+  3. **引力非平衡本质**：在月球影响球边界，地球引力仍然是月球引力的 84 倍，影响球是相对摄动比平衡，非合力为零。
+- **教授干扰项特征**：常选“影响球是合力平衡面”或“距离占比与时间占比同频”。
+- **1 秒秒杀口诀**：**影响球非引力平衡点，高处速度极慢导致距离短而时间长！**
+
+
 ### 12. 地月交会几何与闭式角动量 h1 (Departure Geometry & Closed-Form h1)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.2, **Book pp. 440–446 (PDF pp. 447–453)**, Equation 9.18 & Equations 9.10–9.20
 
@@ -396,6 +518,18 @@ $$R_S = D \left(\frac{m_{\text{moon}}}{m_{\text{earth}}}\right)^{2/5} = 384,400 
 - 给定起飞航迹角 $\gamma_0$，直接闭式解析求出角动量 $h_1$，彻底颠覆了传统的盲目打靶试凑算法。
 
 ---
+
+
+#### 12.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q22, Q29, Q32, Q38, Q40; Weekend Set B Q22, Q29, Q32, Q38, Q40; 仿真考题 13
+- **核心考法拆解**：
+  1. **超前角与飞行时间正比**：$\phi_1 = \omega_m \Delta t_1$。注入速度越高，飞行时间越短，超前角越小（Smaller）。
+  2. **发射几何慢于驻留周期**：飞船绕地一圈期间月球向前公转，飞船必须多转一点去迎合新几何，重复周期更长。
+  3. **闭式解两道红线**：一道分母为零几何够不着，一道 $e=1$ 够得着但已开裂为双曲线。
+  4. **一度换一度旋钮**：改变出发点位置角 $\theta_0$，地心转移张角 $\Delta\theta$ 丝毫不差等量改变一度。
+- **教授干扰项特征**：常误选“飞得快超前角变大”或“两道红线是同一回事”。
+- **1 秒秒杀口诀**：**飞得快超前角变小，靶子在跑周期变慢，出发角一度换一度！**
+
 
 ### 13. 月心双曲线能量门与撞月判据 (Selenocentric Hyperbola & Impact)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.2, **Book pp. 445–449 (PDF pp. 452–456)**, Equations 9.21–9.32 & Example 9.1
@@ -419,6 +553,18 @@ $$\Delta v_{\text{LOI}} = v_{p2} - \sqrt{\frac{\mu_m}{r_{p2}}} = \sqrt{\frac{\mu
 
 ---
 
+
+#### 13.4 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q14, Q34, Q36, Q37, Q48; Weekend Set B Q14, Q34, Q36, Q37, Q48; 仿真考题 14
+- **核心考法拆解**：
+  1. **自然到达恒为双曲线**：无动力飞抵月球，能量 $\varepsilon_2 > 0$，无动力绝不可能被自然捕获成圆或椭圆。
+  2. **入极低圆轨反更费燃料**：捕获脉冲 $\Delta v_{cap}$ 随近月点升高而反常下降，因为极低圆轨深陷月球引力井底，能量账单赤字过大，压垮了奥伯特收益。
+  3. **随动系拱线固定是近似**：旋转坐标系是非惯性系，存在惯性力摄动，拱线静止仅为工程人为假定。
+  4. **开方带来的半质量比误差**：计算圆速度 $v_c = \sqrt{\mu/r}$ 忽略月球质量，相对误差为质量比的一半（Half the mass ratio）。
+- **教授干扰项特征**：死套奥伯特效应以为入最低圆轨永远最省，或以为双曲线拱线在转动系严格静止。
+- **1 秒秒杀口诀**：**直接到达恒为双曲线，入低圆轨深陷井底反费油，随动系静止是近似！**
+
+
 ### 14. 飞越偏转角与阿波罗 8 字形自由返回 (Flybys & Apollo Free Return)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 8, Section 8.9 *Planetary flyby*, **Book pp. 412–420 (PDF pp. 419–427)**, Equations 8.41, 8.44; Chapter 9, Section 9.2, **Book pp. 450–456 (PDF pp. 457–463)**
 
@@ -434,6 +580,17 @@ $$\delta_{\text{turn}} = 2 \arcsin\left(\frac{1}{e_2}\right)$$
 ---
 
 # 模块六：Week 6 3D转移、受限三体与环月轨道设计 (3D, 3-Body & Lunar Orbits)
+
+
+#### 14.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Weekend Set A Q42, Q45, Q46; Weekend Set B Q42, Q45, Q46; Thursday Q18; 仿真考题 15
+- **核心考法拆解**：
+  1. **月心两体飞越速率守恒**：在月球中心两体参考系中，无动力飞越进出相对速率绝对相等（$v_{\infty,out} = v_{\infty,in}$），引力唯独偏转了航向矢量。
+  2. **最强弯折条件**：$\sin(\delta/2) = 1/e_2$。要想偏折最剧烈，偏心率必须逼近于 1，要求飞船低速且极贴近（Slow and close）。
+  3. **自由返回代价**：严苛咬合双重引力边界，极大限制了交会几何与所能抵达的月表着陆区（仅限赤道）。
+- **教授干扰项特征**：常误以为月心视角下相对速率也会增加，或以为自由返回需要大量燃料。
+- **1 秒秒杀口诀**：**月心进出速率绝对守恒，慢且贴近弯折最强，自由返回牺牲着陆区！**
+
 
 ### 15. 3D地月转移、白道振荡与 Simpson 拟合有效期 (3D Conics & Ephemeris)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.3 *A simplified lunar ephemeris* (Book pp. 457–460, PDF pp. 464–467) & Section 9.4 *Patched conic lunar trajectories in three dimensions* (Book pp. 461–468, PDF pp. 468–475), Equations 9.40–9.62, Table 9.1, Fig. 9.9
@@ -452,6 +609,17 @@ $$i_m = 23.44^\circ \pm 5.14^\circ \in [\mathbf{18.3^\circ, 28.6^\circ}]$$
 
 ---
 
+
+#### 15.4 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Thursday Q1, Q2, Q5, Q6, Q7, Q9, Q10; Weekend Set A Q28; Weekend Set B Q05, Q28; 仿真考题 16, 17
+- **核心考法拆解**：
+  1. **白道交点进动物理源**：白道法向量围绕**黄道面法线**以 $5.145^\circ$ 夹角顺滑进动，周期为 18.6 年，引发对赤道倾角在 18.3° 到 28.6° 之间循环。
+  2. **Simpson 拟合星历误差传递**：经验多项式外推漂移，其微小位置误差会通过双曲线到达几何非线性放大或改变近月点高度。
+  3. **3D 二次根物理分野**：选错根不会导致程序报错（数值依然收敛），但近月点从预期的飞越变成灾难性撞击月球。
+- **教授干扰项特征**：常诱导“进动围绕地球极轴”或“Simpson 星历误差与近月点误差严格等大”。
+- **1 秒秒杀口诀**：**白道绕黄道法线转 18.6 年，Simpson 拟合误差由到达几何放大！**
+
+
 ### 16. 圆型受限三体动力学与 RK4 漂移灾难 (CR3BP & RK4 Reality)
 > 📖 **教材对应出处 (Textbook)**: Curtis Chapter 9, Section 9.5 *Lunar trajectories by numerical integration*, **Book pp. 469–476 (PDF pp. 476–483)**, Equations 9.63–9.69 & Example 9.3; Chapter 2, Section 2.12 *Circular restricted three-body problem* (Book pp. 116–131, PDF pp. 123–138)
 
@@ -467,6 +635,17 @@ $$\ddot{\mathbf{r}} = -\frac{\mu_e}{r^3}\mathbf{r} + \mu_m \left[\frac{\mathbf{r
 - 🎯 **工程启示**：两体圆锥拼接法只能做航线初步粗估，真实月球任务**必须携带燃料配置 3–4 次中途轨道修正点火（Trajectory Correction Maneuvers, TCMs）**。
 
 ---
+
+
+#### 16.3 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Thursday Q3, Q4, Q8; Weekend Set A Q01; Weekend Set B Q02, Q31; 仿真考题 18
+- **核心考法拆解**：
+  1. **逆行局域轨道面判定**：局域平面法向量由副法线 $\hat{\mathbf{b}} = \frac{\mathbf{v} \times \mathbf{a}}{|\mathbf{v} \times \mathbf{a}|}$ 给出，局域倾角 $i = \arccos(\hat{\mathbf{b}} \cdot \hat{\mathbf{K}}) > 90^\circ$（近月点约 156°）表示逆行。
+  2. **有心力法向平行本质**：在纯有心引力场中，$\mathbf{a} \parallel \mathbf{r} \implies \mathbf{v} \times \mathbf{a} \parallel \mathbf{r} \times \mathbf{v} = \mathbf{h}$，密切面法向严格平行于角动量。
+  3. **三体微分方程减法项实质**：$-\mu_2 \frac{\mathbf{r}_m}{r_m^3}$ 是月球对中心天体地球的牵连加速度，由于处于非惯性地心系，必须作为虚拟惯性力扣除。
+- **教授干扰项特征**：常选“逆行是飞船掉头倒着飞”或“减法项是因为遮挡引力减弱”。
+- **1 秒秒杀口诀**：**副法线超 90 度为逆行，有心力加速度沿向径，三体减法项是牵连惯性力！**
+
 
 ### 17. 月球质量瘤、冻结轨道与 Artemis / Gateway (Mascons, Frozen Orbits & NRHO)
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 10, Section 10.10 *Lunar gravity*, **Book pp. 529–535 (PDF pp. 536–542)**; Lecture 6 Slides *Wk04-06_Lunar_Trajectories_L5_L6.pdf*, pp. 42–65
@@ -491,3 +670,15 @@ $$i_{\text{frozen}} \in \{\mathbf{27^\circ, 50^\circ, 76^\circ, 86^\circ}\}$$
    - 极区深坑拥有数十亿年未见阳光的**永久阴影区（PSRs）**，封存着宝贵的水冰资源；坑沿高地拥有**永昼峰（Peaks of Eternal Light）**，提供近乎无限的太阳能。
    - 澳大利亚 ELO2 “Roo-ver” 漫游车计划 2030 年通过 NASA CLPS 登陆月球南极收集月壤。
    - **Artemis II (2026)**：载人四人绕月飞越测试，采用自由返回轨道，将创造人类飞离地球最远的深空历史纪录（$406,740\text{ km}$）。
+
+
+#### 17.4 🎯 【真题高频考法与深度物理直觉】(Exam Patterns & Deep Intuition)
+- **真题出处**：Thursday Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q19, Q20; Weekend Set A Q39, Q44; Weekend Set B Q39, Q44; 仿真考题 19, 20
+- **核心考法拆解**：
+  1. **Gateway 9:2 NRHO 避食神技**：9 圈共振周期严格对齐 2 个**朔望月（Synodic months）**，锁死太阳直射方向，终年避开地影月影。
+  2. **极轨全经度覆盖耗时不变律**：轨道降低高度分辨率提升，但全经度扫过时间完全由月球自转周期（27.3 天）锁死，绝对不变。
+  3. **冻结轨道力学机制**：调谐轨道倾角与偏心率，使得摄动在长周期内的**平均漂移变化率为零**，绝非瞬时合力为零。
+  4. **中继卫星大椭圆核心逻辑**：月球背面 41% 永久不可见地球，中继卫星必须采用大椭圆，利用开普勒第二定律在远心端“购买”漫长的覆盖通信驻留时间。
+- **教授干扰项特征**：选“Gateway 对齐恒星月”、“冻结轨道瞬时受力平衡矢量抵消”、“降低极轨高度缩短全经度扫描时间”。
+- **1 秒秒杀口诀**：**Gateway 9:2 对齐朔望月，极轨全经度覆盖看自转，冻结轨道平均漂移归零！**
+
