@@ -42,6 +42,10 @@
 9. **圆轨道速度决定量**：$v_c = \sqrt{\mu/r}$，**仅由中心天体引力常数 $\mu$ 和半径 $r$ 决定**，与飞船吨位、剩余燃油、轨道倾角完全无关。*(周末真题 Q36)*
 10. **纯平面变面最便宜点位**：$\Delta v = 2 v \sin(\theta/2)$，必须挑航速最慢处点火，永远在**远拱点（Apoapsis）**最廉价。*(周末真题 Q37)*
 11. **正对月心瞄准的近月点**：角动量为零（$h=0$），退化为直线轨道，理论近月点半径为零（$r_p=0$），真实飞船**直接砸在月表撞击坠毁**。*(周末真题 Q38)*
+12. **环月到达双曲线超速与捕获必要性 (Capture is a Choice)**：月心双曲线比能量严格为正（$\varepsilon_2 > 0$），近月点航速（$\sim 2.07\text{ km/s}$）高于逃逸速度（$1.885\text{ km/s}$）。真空二体是保守场，引力无法自发消耗机械能，**不逆向点火刹车（LOI）必沿出射渐近线飞离深空**！*(第 7 周讲义 L7 Slide 6, Curtis 9.3)*
+13. **动力下降轨道切入（DOI）速度增量量级**：从 $100\text{ km}$ 圆轨道降至 $15\text{ km}$ 近月点，属于半霍曼转移远月点微调，**$\Delta v_{\text{DOI}}$ 仅需 $\sim 22\text{ m/s}$** 即可换取 $85\text{ km}$ 的自由落体高度下降。*(第 7 周讲义 L8 Slide 7, Curtis 6.2)*
+14. **月表悬停推进剂惩罚铁律 (Hover Penalty)**：月球表面重力加速度 $g_m = 1.624\text{ m/s}^2$，为抵消重力静止悬停，**每悬停 1 秒钟需要持续消耗 $1.624\text{ m/s}$ 的等效速度增量 $\Delta v$**（悬停 60 秒白白烧掉近 $100\text{ m/s}$ 燃料）！*(第 7 周讲义 L8 Slide 40)*
+15. **阿波罗 11 号“剩余 30 秒燃油”工程真相**：呼叫指的是**距离必须执行强制中止着陆（Abort Criteria）并点火上升级发动机逃逸只剩 30 秒决策时间**，绝非下降级油箱将在 30 秒内彻底抽干熄火。*(第 7 周讲义 L8 Slide 42)*
 
 ### 🔵 2. Credit 进阶阶 (1.5 分题) · 定性缩放律与多解对称
 1. **冲量模型首选测试准则**：发动机点火时间是否仅占该轨道公转周期的微小份额（**$t_{\text{burn}} / T \ll 1$**）。*(周末真题 Q5)*
@@ -58,6 +62,11 @@
 12. **两体拼接与真三体数值积分误差分布**：在全航程广阔过渡区内弥散积累，**绝非在影响球面上突发阶跃跳变（A broad transition region, not a step）**。*(周末真题 Q41)*
 13. **奔月四大旋钮的一对一映射**：停泊轨道出发点角 $\alpha_0$ 能够**度对度（degree for degree）直接改变地心转移张角 $\Delta\theta$**。*(周末真题 Q42)*
 14. **地月网关 NRHO 9:2 共振本质**：9 个轨道周期精准吻合**两个会合月（Two synodic months）**，锁定太阳光照方向，彻底规避日食。*(周末真题 Q43)*
+15. **速度消除基准（Speed Cancellation Benchmark）**：在 $15\text{ km}$ 近月点，飞船水平航速高达 $1.692\text{ km/s}$。以标准双组元推进剂（$I_{sp} = 310\text{ s}$）计，消除此水平动能所需的**理想火箭方程质量比下限为 $m_0/m_f = \exp(1692 / 3041) \approx 1.76$**（推进剂占满载 $43\%$ 以上）。*(第 7 周讲义 L8 Slide 16)*
+16. **极轨卫星月球全经度遍历耗时**：极轨每圈穿过正面与背面（相隔 $180^\circ$ 经度），当月球自转半圈（$180^\circ$）时降交点轨迹即可覆盖剩余半球，**遍历全部经度仅需半个恒星月（$27.32 / 2 \approx 13.66\text{ 天}$）**，并非整整一圈。*(第 7 周讲义 L7 Slide 46)*
+17. **高远月点变面节油 7 倍法则**：平面改变脉冲 $\Delta v = 2 v \sin(\Delta i/2)$ 与速度成正比。$100\text{ km}$ 低轨航速 $1.63\text{ km/s}$，而在 $16,000\text{ km}$ 椭圆远月点航速降至 $0.23\text{ km/s}$，**远月点做变面代价仅为低轨的 $1/7$**！*(第 7 周讲义 L7 Slide 24)*
+18. **地月自由转移面自然对准机理 (Free Plane Targeting)**：从地球出发的倾角受发射场纬度约束，但到达月球时的目标轨道倾角无需在月球强行变面，只需在发射时精准协调时钟并**通过几十 m/s 的中途修正（TCM）微调飞入月球 SOI 的 B 平面碰撞参数，即可免费对准任意月球轨道倾角**！*(第 7 周讲义 L7 Slide 35)*
+19. **PDI 15 km 黄金高度权衡**：从 $15\text{ km}$ 启动主减速，**兼顾了重力损失最小化与地形避障安全**（若太高启动重力损失暴增数百 m/s；若低于 10 km 启动，月球南极高达 6–8 km 的撞击坑山脊与导航误差将导致可控撞地 CFIT）。*(第 7 周讲义 L8 Slide 11, NASA TN D-6846)*
 
 ### 🟣 3. Distinction 拔高阶 (2.0 分题) · 极值敏感度与工程陷阱
 1. **近地点纯横向点火**：点火后径向速度依然为零（$v_r^+ = 0$），**拱线完全保持不动（Leaves apse line unmoved）**，仅拉高远地点。*(周末真题 Q11)*
@@ -72,6 +81,11 @@
 10. **脱靶残差与灵敏度工程转化**：汇报残差及其微分灵敏度，将抽象数学误差直接转化为**推进与制导硬件系统必须达到的工程研制指标（Propulsion requirement）**。*(周末真题 Q44)*
 11. **月心双曲线偏折最强条件**：偏转角 $\delta = 2\arcsin(1/e)$，偏心率 $e = 1 + \frac{r_p v_\infty^2}{\mu_m}$；**速度极慢且掠过极近（Slow and close）时 $e \to 1$ 弯折最剧烈**！*(周末真题 Q45)*
 12. **极轨全经度覆盖周期**：降低高度改善相机分辨率，但完整扫完 360 度经度所需时间**雷打不动等于月球自转周期（27.3 天）**。*(周末真题 Q47)*
+13. **分级捕获（Staged LOI）三大系统工程红利**：LOI-1 先入大椭圆（如 $100 \times 3141\text{ km}$），LOI-2 再圆化。红利在于：① 分散大推力发动机热载荷；② 在超慢速远月点以极小代价实施轨道面与交点微调（Nodal trim）；③ 消除单次长点火提前关机直接飞离深空的致命风险。*(第 7 周讲义 L7 Slide 16)*
+14. **动力下降超基准 89 m/s 损失解剖**：阿波罗实测下降消耗 $1.781\text{ km/s}$，比纯速度消除（$1.692\text{ km/s}$）多出的 $89\text{ m/s}$，其物理本质是**推力向上偏转以抵抗月球重力所累积的重力损失 $\int g_m \sin\theta dt$ 与推力矢量转向损失**，月球是超高真空，气动阻力损失严格为零！*(第 7 周讲义 L8 Slide 26)*
+15. **线性正切导引律的最优控制本源 (Linear Tangent Steering)**：动力下降二维运动方程 $\tan\theta(t) = a \cdot t + b$ 是在均匀重力场与恒定推力假设下，由**庞特里亚金极大值原理（Pontryagin's Maximum Principle）推导出的推进剂燃料最优闭式解析解**。*(第 7 周讲义 L8 Slide 22)*
+16. **阿波罗进近段立起仰角工程目的**：制动段登月舱平躺（航天员只能看星空）；在 $2.5\text{ km}$ 进近段将仰角立起至 $45^\circ\sim 60^\circ$，核心目的是**将舷窗朝向前下方月表，使宇航员用肉眼看清撞击坑地形，并通过 LPD 系统评估是否需要手动干预重选平坦着陆点**。*(第 7 周讲义 L8 Slide 32)*
+17. **三轴月球与第三体摄动打破极轨冻结神话**：纯 J2 模型下极轨（$i=90^\circ$）因 $\cos 90^\circ = 0$ 交点退行率为零；但月球是非对称三轴椭球体，高阶非带谐项（$C_{22}$、质量瘤）与地日第三体引力打破对称性，使得像 LRO 这样的极轨交点依然以每年数度的速率持续漂移。*(第 7 周讲义 L7 Slide 48)*
 
 ### 🔴 4. High Distinction 卓越阶 (2.5 分题) · 教授五大工程设计哲学
 1. **工程哲学一：“先抓对结构拓扑，再精雕细琢连续变量” (Get the structure right before polishing the variables)**：
@@ -94,6 +108,19 @@
 7. **高阶洞见七：低推力闭式螺旋公式的适用物理边界**：
    - 离子发动机微推力使得轨道像蚊香一样致密，**每时每刻处处保持准正圆（$v \approx v_c$）**，公式完美成立；
    - 化学火箭暴烈加速瞬间把轨道拉扁成大椭圆，彻底粉碎该物理假定！*(周末真题 Q49)*
+
+8. **工程哲学八：“单级质量比的指数悬崖与登月分级必然性” (The Exponential Cliff of Single-Stage Landing)**：
+   - 从 LEO 到月球表面软着陆的全流程 $\Delta v$ 链条（TLI + TCM + LOI + DOI + PDI + 重力损失 + 裕度）总需求高达 $\sim 6000\text{ m/s}$；
+   - 在双组元化学推进（$I_{sp} = 310\text{ s}$）下，单级质量比需求 $m_0/m_f = \exp(6000 / 3041) \approx 7.2$，推进剂质量分数占 $86.1\%$，结构、航电和有效载荷合计仅占 $13.9\%$！
+   - 任何系统增重都会被火箭方程指数放大导致无法闭合，这是迫使登月工程必须采用“多级火箭 + 独立登月舱（Apollo LOR 架构）”的力学根本原因！*(第 7 周讲义 L8 Slide 57)*
+9. **工程哲学九：“现代无人登月的致命破局点在软件容错与传感器边缘工况” (Software Edge Cases over Mechanical Flaws)**：
+   - 印度月船二号因姿态控制力矩饱和发散坠毁；
+   - 日本 SLIM 演示了 $<100\text{ m}$ 针尖级光学 TRN 坑洼匹配着陆，但 50 米处喷管脱落导致侧翻倒立；
+   - 商业着陆器 ispace 白兔号（Hakuto-R）因激光高度计掠过深坑边缘时，突变读数被软件异常值滤波器误判剔除，导致在 5 km 高空提前悬停耗尽燃油坠毁。
+   - 现代登月器动力学成功的核心已转移至**极度鲁棒的自治导航与多传感器融合容错逻辑（GNC Fail-Safe Philosophy）**。*(第 7 周讲义 L8 Slides 47–55)*
+10. **工程哲学十：“低轨大角度变面的毁灭性与远月点抬高的摄动截断极限”**：
+    - 在 $100\text{ km}$ 低月圆轨道做 $20^\circ$ 倾角修正需 $\Delta v = 2(1.633)\sin(10^\circ) \approx 567\text{ m/s}$，直接吞掉大半次月球捕获燃料；
+    - 分级捕获中虽抬高远月点可省入轨燃料，但当远月点接近月球影响球边界（$R_S \approx 66,100\text{ km}$）时，地球第三体引力摄动将使轨道极度发散甚至剥离逃逸，且周期暴增会错过着陆晨昏光照窗口。天体力学给工程省油设定了不可逾越的引力截断！*(第 7 周讲义 L7 Slide 18 & 26)*
 
 ---
 ---
@@ -122,6 +149,15 @@
   - [15. 3D地月转移、白道振荡与 Simpson 拟合有效期 (3D Conics & Ephemeris)](#15-3d地月转移白道振荡与-simpson-拟合有效期-3d-conics--ephemeris)
   - [16. 圆型受限三体动力学与 RK4 漂移灾难 (CR3BP & RK4 Reality)](#16-圆型受限三体动力学与-rk4-漂移灾难-cr3bp--rk4-reality)
   - [17. 月球质量瘤、冻结轨道与 Artemis / Gateway (Mascons, Frozen Orbits & NRHO)](#17-月球质量瘤冻结轨道与-artemis--gateway-mascons-frozen-orbits--nrho)
+- [模块七：Week 7 环月捕获、动力下降与南极着陆 (Capture, Powered Descent & Landing)](#模块七week-7-环月捕获动力下降与南极着陆-capture-powered-descent--landing)
+  - [18. 环月捕获阶梯、Oberth 机理与双椭圆节油路径 (Lunar Capture Ladder, Oberth Effect & Route A vs Route B)](#18-环月捕获阶梯oberth-机理与双椭圆节油路径-lunar-capture-ladder-oberth-effect--route-a-vs-route-b)
+  - [19. 环月轨道面调整的高昂代价与“免费”目标轨道面几何 (Lunar Orbit Plane Changes & Free Transfer Plane Targeting)](#19-环月轨道面调整的高昂代价与免费目标轨道面几何-lunar-orbit-plane-changes--free-transfer-plane-targeting)
+  - [20. 环月等待期 (The Loiter) 与极轨覆盖几何 (Lunar Rotation, Loiter Time & Polar Orbit Geometry)](#20-环月等待期-the-loiter-与极轨覆盖几何-lunar-rotation-loiter-time--polar-orbit-geometry)
+  - [21. 动力下降轨道切入 (DOI) 与 15 km 近月点权衡 (Descent Orbit Insertion & The 15 km Altitude Trade)](#21-动力下降轨道切入-doi-与-15-km-近月点权衡-descent-orbit-insertion--the-15-km-altitude-trade)
+  - [22. 动力下降制动问题、三自由度轨迹积分与推重比优化 (Powered Descent Guidance, Equations of Motion & T/W Optimization)](#22-动力下降制动问题三自由度轨迹积分与推重比优化-powered-descent-guidance-equations-of-motion--tw-optimization)
+  - [23. 动力下降损失分解 (重力损失与导引转向损失) 与 阿波罗三阶段下降 (Gravity Losses, Steering Losses & Apollo Three-Phase Descent)](#23-动力下降损失分解-重力损失与导引转向损失-与-阿波罗三阶段下降-gravity-losses-steering-losses--apollo-three-phase-descent)
+  - [24. 悬停惩罚铁律 ($1.624\text{ m/s}^2$)、推进剂质量账本与南极着陆工程现实 (Hover Penalty, Propellant Budget & South Pole Realities: SLIM, IM-2, ELO2)](#24-悬停惩罚铁律-1624text-ms2推进剂质量账本与南极着陆工程现实-hover-penalty-propellant-budget--south-pole-realities-slim-im-2-elo2)
+  - [25. 全程地月任务 $\Delta v$ 链条端到端核算与方程式宾果总结 (End-to-End Mission $\Delta v$ Budget & Equation Bingo Synthesis)](#25-全程地月任务-delta-v-链条端到端核算与方程式宾果总结-end-to-end-mission-delta-v-budget--equation-bingo-synthesis)
 
 ---
 
@@ -683,6 +719,10 @@ $$i_{\text{frozen}} \in \{\mathbf{27^\circ, 50^\circ, 76^\circ, 86^\circ}\}$$
 - **1 秒秒杀口诀**：**Gateway 9:2 对齐朔望月，极轨全经度覆盖看自转，冻结轨道平均漂移归零！**
 
 
+
+---
+
+# 模块七：Week 7 环月捕获、动力下降与南极着陆 (Capture, Powered Descent & Landing)
 
 ### 18. 环月捕获阶梯、Oberth 机理与双椭圆节油路径 (Lunar Capture Ladder, Oberth Effect & Route A vs Route B)
 > 📖 **教材与讲义对应出处 (Textbook & Lec)**: Curtis Chapter 9, Section 9.3 *Lunar trajectories*, **Book pp. 450–467 (PDF pp. 457–474)**; Chapter 6, Section 6.4 *Bi-elliptic transfers*, **Book pp. 306–314 (PDF pp. 313–321)**; Week 7 Lecture 7 Slides 1–20; NASA SP-287 *Apollo 11 Mission Report*
